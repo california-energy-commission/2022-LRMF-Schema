@@ -1,8 +1,8 @@
-# 2022-Prescriptive-Residential-LM-Schema
+# 2022-LRMF-Schema
 
-[![GitHub Actions](https://github.com/RASENTSolutionsLLC-NORESCO/2022-Prescriptive-Residential-LM-Schema/actions/workflows/actions.yml/badge.svg)](https://github.com/RASENTSolutionsLLC-NORESCO/2022-Prescriptive-Residential-LM-Schema/actions/workflows/actions.yml)
+[![GitHub Actions](https://github.com/california-energy-commission/2022-LRMF-Schema/actions/workflows/actions.yml/badge.svg)](https://github.com/california-energy-commission/2022-LRMF-Schema/actions/workflows/actions.yml)
 
-Schema files for 2022 Prescriptive NonResidential documents.
+Schema files for 2022 LRMF documents.
 
 ### Testing
 
