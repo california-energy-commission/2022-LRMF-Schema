@@ -362,8 +362,8 @@ If A12_UseMinimumAirflowApprovedVerificationProcedure == false,
 result = SystemCompliesUsingObservationOfWeighIn display term  The airflow rate measurement procedures in RA3.3 or RA3.3.3 are not applicable to this system, therefore compliance shall use HERS Rater observation (RA3.2.3.2) of the installer's weigh-in charging procedure (RA3.2.3.1);  
  
 Else If the  parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance:  then 
-If the system has a registered LMCI-MCH-28 that indicates compliance with Table 150.0-B or C return duct design requirements, then 
-result  = SystemCompliesUsingTable150BC display term System complies using Table 150.0-B or C alternative return duct design criteria;   
+If the system has a registered LMCI-MCH-28 that indicates compliance with Table 160.3-A or B return duct design requirements, then 
+result  = SystemCompliesUsingTable150BC display term System complies using Table 160.3-A or B alternative return duct design criteria;   
 Else 
 result = SystemDoesNotComplyLMCIMCH28Required display term System does not comply.  A registered LMCI-MCH-28 is required (do not allow this MCH-25 to be registered);  
 End If   

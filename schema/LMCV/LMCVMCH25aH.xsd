@@ -407,8 +407,8 @@ Mch23c  - field E02
                                           <xsd:documentation source="FieldText">System Airflow Rate Verification Status</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Calculated field:  
 If the parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance: 
-If the system has a registered LMCV-MCH-28 that indicates compliance with Table 150.0-B or C return duct design requirements, 
-result  = SystemCompliesUsingTable150BC display term System complies using Table 150.0-B or C alternative return duct design criteria;   
+If the system has a registered LMCV-MCH-28 that indicates compliance with Table 160.3-A or B return duct design requirements, 
+result  = SystemCompliesUsingTable150BC display term System complies using Table 160.3-A or B alternative return duct design criteria;   
 Else result = SystemDoesNotComplyLMCVMCH28Required display term System does not comply.  A registered LMCV-MCH-28 is required (do not allow this MCH-25 to be registered); 
 End If    
  

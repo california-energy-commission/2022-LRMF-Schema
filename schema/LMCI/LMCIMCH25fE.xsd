@@ -261,9 +261,9 @@ Require 1 row of data for each indoor unit listed in the "HERS Verification Requ
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Required System Airflow Rate (cfm)</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">Calculated field: 
-If the parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance
-result = RequiredVerificationTable150BC stored in MinimumAirflowRateAlternative; 
- 
+If the parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance,
+then text value in this field=Verification of Table 160.3 A or B Alternative Return Duct Design Criteria is Required; 
+
 Else reference numeric value  from applicable MCH23 field for the indoor unit in C01 and store result in MinimumAirflowRateRequired.   
  
 Applicable MCH23 field as follows:  
@@ -277,9 +277,9 @@ Mch23c  - field E02
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Required System Airflow Rate (cfm)</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">Calculated field: 
-If the parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance
-result = RequiredVerificationTable150BC stored in MinimumAirflowRateAlternative; 
- 
+If the parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance,
+then text value in this field=Verification of Table 160.3 A or B Alternative Return Duct Design Criteria is Required;
+
 Else reference numeric value  from applicable MCH23 field for the indoor unit in C01 and store result in MinimumAirflowRateRequired.   
  
 Applicable MCH23 field as follows:  
@@ -295,7 +295,7 @@ Mch23c  - field E02
                                           <xsd:documentation source="FieldText">System Airflow Rate Verification Status</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Calculated field:  
 If the parent MCH-01 indicates a MCH-28 is required for alternate minimum airflow rate compliance: 
-If the system has a registered LMCI-MCH-28 that indicates compliance with Table 150.0-B or C return duct design requirements, then result  = SystemCompliesUsingTable150BC display term System complies using Table 150.0-B or C alternative return duct design criteria;   
+If the system has a registered LMCI-MCH-28 that indicates compliance with Table 160.3-A or B return duct design requirements, then result  = SystemCompliesUsingTable150BC display term System complies using Table 160.3-A or B alternative return duct design criteria;   
 Else result = SystemDoesNotComplyLMCIMCH28Required display term System does not comply.  A registered LMCI-MCH-28 is required (do not allow this MCH-25 to be registered)
 End If
    

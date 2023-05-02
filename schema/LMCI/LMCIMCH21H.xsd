@@ -94,14 +94,14 @@
                   </xsd:element>
                   <xsd:element name="A05_DuctsInConditionedSpaceCreditTaken" type="comp:DuctsInConditionedSpaceCreditTaken" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Status – Duct Systems Located Entirely in Conditioned Space, No Insulation Requirement </xsd:documentation>
+                        <xsd:documentation source="FieldText">Ducts Located In Conditioned Space Performance Credit</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Calculated field: If parent CC performance flag indicating a credit was taken for Ducts Located In Conditioned Space Compliance  == 1 (for true) then result = true  display term: True and section C below should be displayed;   Else result = false  display term: Not applicable</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A06_DuctSystemConditionedPerformanceCredit" type="comp:DuctSystemConditionedPerformanceCredit" >
                      <xsd:annotation>
-                        <xsd:documentation source="FieldText">Status - All Ducts Entirely in Directly Conditioned Space Performance Credit</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Calculated Field: if Exception from Minimum R-Value for Duct System Located Entirely in Conditioned Space reported on MCH-01 = yes, then display message true and display Table F below; else display message Not Applicable;</xsd:documentation>
+                        <xsd:documentation source="FieldText">Status – Duct Systems Located Entirely in Conditioned Space, No Insulation Requirement</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Calculated Field: : if Exception from Minimum R-Value for Duct System Located Entirely in Conditioned Space reported on MCH-01 = yes, then display message "true" and display Table F below; else display message "not applicable";</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A07_DuctsInConditionedSpaceRValueException" type="comp:DuctsInConditionedSpaceRValueException" >
@@ -161,7 +161,7 @@
          </xsd:element>
          <xsd:element name="Section_D" minOccurs="0" maxOccurs="1">
             <xsd:annotation>
-               <xsd:documentation source="FieldText">Duct System Located Entirely in Directly Conditioned Space, Performance Credit - RA3.1.4.3.8</xsd:documentation>
+               <xsd:documentation source="FieldText">All Ducts Located Entirely in Directly Conditioned Space, No Insulation Requirement - RA3.1.4.3.8</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">Display this section If A06_DuctSystemConditionedPerformanceCredit == true</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>

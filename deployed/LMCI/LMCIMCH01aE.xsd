@@ -1672,7 +1672,7 @@ Also require one row of data to be entered for each indoor unit in E03_IndoorUni
                                     <xsd:element name="J08_DuctMinimumRValueExceptions">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Exception from Min R-Value</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">default result = NoException; Allow user to override and select one from list;  
+                                          <xsd:documentation source="CalculationsAndRules">default result = NoException; Allow user to override and select one of the following two values;  
 UninsulatedInDirectConditioning display term Portions of Ducts uninsulated  or less than R-6 in conditioned space
  
 If J04_SupplyDuctLocation And J06_ReturnDuctLocation == ConditionedSpace add to list   
@@ -2075,13 +2075,6 @@ Display Yes and No to represent Boolean result values true and false.</xsd:docum
                                           <xsd:documentation source="CalculationsAndRules">Calculated field: If D04_ResidentialHeatingSystemType  Or D05_ResidentialCoolingSystemType  == VCHP_IndoorUnitDucted Or  VCHP_IndoorUnitDuctedAndDuctless result = false display term No; Else reference information from the parent CC-PRF; 
  
 Else If the parent CC-PRF flags the requirement for HERS verified duct design ( Supply Duct Surface Area R-Value or Buried Ducts), then result = true; else result = false. Display Yes and No to represent Boolean result values true and false.</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="M10_VentilationCoolingCreditVerificationRequired" type="comp:VentilationCoolingCreditVerificationRequired">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">MCH30 
-                                             <d:line2/>Central Fan Ventilation Cooling Credit</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Calculated field: I B05_CFVCS_Type == FixedCFVCS Or VariableCFVCS then result = true; else If B05_NotApplicableMessage == N/A  result = false. Display Yes and No to represent Boolean result values true and false.</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                  </xsd:sequence>
