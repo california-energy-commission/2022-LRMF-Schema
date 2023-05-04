@@ -969,8 +969,10 @@ Require one row of data for each water heater identified in Section A TableDesig
                                              <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">reference values from LMCC. If information is not available on LMCC, then allow user input. allowed values are:
                                                 *Uniform Energy Factor
-                                                *AFUE 
-                                                *Thermal Efficiency</xsd:documentation>
+                                                *AFUE
+                                                *Thermal Efficiency
+                                                *Value=N/A
+                                             </xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C02_NotApplicableMessage" type="comp:NotApplicableMessage">
@@ -978,8 +980,10 @@ Require one row of data for each water heater identified in Section A TableDesig
                                              <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">reference values from LMCC. If information is not available on LMCC, then allow user input. allowed values are:
                                                 *Uniform Energy Factor
-                                                *AFUE 
-                                                *Thermal Efficiency</xsd:documentation>
+                                                *AFUE
+                                                *Thermal Efficiency
+                                                *Value=N/A
+                                             </xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
