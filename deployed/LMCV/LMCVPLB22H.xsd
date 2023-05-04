@@ -945,7 +945,8 @@ End If</xsd:documentation>
                                                 *Uniform Energy Factor
                                                 *AFUE
                                                 *Thermal Efficiency
-                                                *Value=N/A</xsd:documentation>
+                                                *Value=N/A
+                                             </xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C02_NotApplicableMessage" type="comp:NotApplicableMessage">
@@ -955,7 +956,8 @@ End If</xsd:documentation>
                                                 *Uniform Energy Factor
                                                 *AFUE
                                                 *Thermal Efficiency
-                                                *Value=N/A</xsd:documentation>
+                                                *Value=N/A
+                                             </xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
