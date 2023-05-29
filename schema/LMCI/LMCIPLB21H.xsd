@@ -783,7 +783,7 @@ End If</xsd:documentation>
                                        <xsd:element name="Hpi02_Generic5kW" type="hvac:Generic5kW" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == Generic5kW
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == Generic5kW OR SandenGS3 
 user is allowed to override default and select from this simulation group 
 End If</xsd:documentation>
                                           </xsd:annotation>

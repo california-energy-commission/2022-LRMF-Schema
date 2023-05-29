@@ -647,7 +647,7 @@ If prescriptive, this field is not required; Else If performance reference value
                   <xsd:element name="C13_DoesCentralWaterHeatingSystemComply" type="comp:DoesCentralWaterHeatingSystemComply" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Compliance Statement</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Calculated field: If in every row C08 LTE B07 And C10 GTE B10 and C11 LTE B11 and C12 GTE B12 then result = true display term System complies; Else result = false dsiplay term System does not comply</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Calculated field: If in every row C08 LTE B08 And C10 GTE B10 and C11 LTE B11 and C12 GTE B12 then result = true display term System complies; Else result = false dsiplay term System does not comply</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
@@ -789,7 +789,7 @@ End If</xsd:documentation>
                                        <xsd:element name="Hpi02_Generic5kW" type="hvac:Generic5kW" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == Generic5kW
+                                             <xsd:documentation source="CalculationsAndRules">If Hpd12_HeatPumpWaterHeaterSimulationGroup == Generic5kW OR SandenGS3 
 user is allowed to override default and select from this simulation group 
 End If</xsd:documentation>
                                           </xsd:annotation>
