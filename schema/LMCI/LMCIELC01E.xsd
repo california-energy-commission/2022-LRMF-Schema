@@ -63,13 +63,14 @@
                   <xsd:element name="A01_ResElectricReadyScope"  maxOccurs="unbounded">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Project Scope</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">User selects all that apply: ReadyHeatingHP, ReadyElecCooktop, ReadyElecDryer</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">User selects all that apply: ReadyHeatingHP, ReadyElecCooktop, ReadyElecDryer Or select ReadyElecNA if building is all-electric</xsd:documentation>
                      </xsd:annotation>
                      <xsd:simpleType>
                         <xsd:restriction base="comp:ResElectricReadyScope">
                            <xsd:enumeration value="ReadyElecCooktop"/>
                            <xsd:enumeration value="ReadyElecDryer"/>
                            <xsd:enumeration value="ReadyHeatingHP"/>
+                           <xsd:enumeration value="ReadyElecNA"/>
                         </xsd:restriction>
                      </xsd:simpleType>
                   </xsd:element>

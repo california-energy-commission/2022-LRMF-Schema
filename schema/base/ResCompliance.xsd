@@ -16782,6 +16782,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
             <dtyp:displayterm value="ReadyElecDryer">Electric Clothes Dryer Ready - Systems Serving Individual Dwelling Units (Clothes dryers with gas or proprane plumbing)</dtyp:displayterm>
             <dtyp:displayterm value="ReadyElecDryerCommon">Electric Clothes Dryer Ready - Systems in Common Areas (Clothes dryers with gas or proprane plumbing)</dtyp:displayterm>
             <dtyp:displayterm value="ReadyHeatingHP">Heat Pump Space Heater Ready (For systems using gas or proprane furnace)</dtyp:displayterm>
+            <dtyp:displayterm value="ReadyElecNA">None of these</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -16789,6 +16790,7 @@ the inside surface of gable ends or other exterior vertical surfaces in attics t
          <xsd:enumeration value="ReadyElecDryer"/>
          <xsd:enumeration value="ReadyElecDryerCommon"/>
          <xsd:enumeration value="ReadyHeatingHP"/>
+         <xsd:enumeration value="ReadyElecNA"/>  
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialCeilingRoofInsulationOption">
