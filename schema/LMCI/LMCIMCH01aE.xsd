@@ -694,7 +694,7 @@ Require one row of data to be entered in this table for each space conditioning 
                                     <xsd:element name="D05_ResidentialCoolingSystemType" type="hvac:ResidentialCoolingSystemType" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Cooling System Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Auto-filled text: Reference value from B04_ResidentialCoolingSystemType
+                                          <xsd:documentation source="CalculationsAndRules">Auto-filled text: Reference value from B04_ResidentialCoolingSystemType as default; do not allow user to override value
  
 Note: Allowed values for B04 may include: CentralLargePackagedAC, CentralLargePackagedHP, CentralPackagedAC, CentralPackagedHP, CentralSplitAC, CentralSplitHP, DuctedMultiSplitAC, DuctlessMultiSplitAC, DuctedDuctlessMultiSplitAC, DuctedMultiSplitHP, DuctlessMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctlessSplitAC (display term Ductless mini-split AC), DuctlessSplitHP (display term Ductless mini-split HP), DuctlessVRF_AC, DuctlessVRF_HP, DuctedMiniSplitAC, DuctedMiniSplitHP, AirToWaterHeatPump, GroundSourceHeatPump, EvaporativeDirect, EvaporativeIndirect, EvaporativeIndirectDirect, EvaporativelyCooledCondenser, GasAbsorptionAC, HydronicHP, HydronicHP_ForcedAir, IceStorageAC, NoCooling, RoomAC, RoomHP, SmallDuctHighVelocityAC, SmallDuctHighVelocityHP, VCHP_IndoorUnitDucted, VCHP_IndoorUnitDuctedAndDuctless, VCHP_IndoorUnitDuctless, SPVAC, SPVHP, PTAC, PTHP.
  

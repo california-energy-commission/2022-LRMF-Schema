@@ -161,7 +161,7 @@ This  section is required if the parent CC has any non-HPWH non-HERS systems, Re
                                        <xsd:element name="A09_ResidentialDHWDwellingUnitDistributionType" type="hvac:ResidentialDHWDwellingUnitDistributionType">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC 
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC.  If information is not available on the LMCC, then allow user input. 
                                                 If performance then allowed values are
                                                 *Standard Distribution System
                                                 * Point of Use
@@ -171,15 +171,13 @@ This  section is required if the parent CC has any non-HPWH non-HERS systems, Re
                                                 
                                                 Else if prescriptive Allowed values are 
                                                 *Standard Distribution System
-                                                *Demand Recirculation
-                                                * Demand Recirculation Manual Control;
-                                                Else if prescriptive, then value = NA;</xsd:documentation>
+                                                * Demand Recirculation Manual Control</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="A09_NotApplicableMessage" type="comp:NotApplicableMessage">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC 
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC. If information is not available on the LMCC, then allow user input.  
                                                 If performance then allowed values are
                                                 *Standard Distribution System
                                                 * Point of Use
@@ -189,7 +187,6 @@ This  section is required if the parent CC has any non-HPWH non-HERS systems, Re
                                                 
                                                 Else if prescriptive Allowed values are 
                                                 *Standard Distribution System
-                                                *Demand Recirculation
                                                 * Demand Recirculation Manual Control;
                                                 Else if prescriptive, then value = NA;</xsd:documentation>
                                           </xsd:annotation>
@@ -760,6 +757,54 @@ If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemHBDR4580 list = RheemHB
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInDedicated40SimulationGroup" type="hvac:RheemPlugInDedicated40SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInDedicated40 list = RheemPlugInDedicated40SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInDedicated50SimulationGroup" type="hvac:RheemPlugInDedicated50SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInDedicated50 list = RheemPlugInDedicated50SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared40SimulationGroup" type="hvac:RheemPlugInShared40SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared40 list = RheemPlugInShared40SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared50SimulationGroup" type="hvac:RheemPlugInShared50SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared50 list = RheemPlugInShared50SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared65SimulationGroup" type="hvac:RheemPlugInShared65SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared65 list = RheemPlugInShared65SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared80SimulationGroup" type="hvac:RheemPlugInShared80SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared80 list = RheemPlugInShared80SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_Sanden40SimulationGroup" type="hvac:Sanden40SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -1054,6 +1099,12 @@ Require one row of data for each water heater identified in Section A TableDesig
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C03_ThermalEfficiency" type="hvac:ThermalEfficiency">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency Value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference value from performance parent CC; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="C03_EfficiencyCOP" type="hvac:EfficiencyCOP">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">Reference value from performance parent CC; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
