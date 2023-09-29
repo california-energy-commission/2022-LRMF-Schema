@@ -170,41 +170,37 @@ This  section is required if the parent CC has any non-HPWH non-HERS systems, Re
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:choice maxOccurs="1">
-                                       <xsd:element name="A09_ResidentialDHWDwellingUnitDistributionType" type="hvac:ResidentialDHWDwellingUnitDistributionType" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC.  If information is not available on the LMCC, then allow user input. 
-                                                If performance then allowed values are
-                                                *Standard Distribution System
-                                                * Point of Use
-                                                * Parallel Piping *Recirculation System Non-Demand Control
-                                                * Demand Recirculation Manual Control 
-                                                * Demand Recirculation Sensor Control; 
+                                    <xsd:element name="A09_ResidentialDHWDwellingUnitDistributionType" >
+                                       <xsd:annotation>
+                                          <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from LMCC.  If information is not available on the LMCC, then allow user input. 
+                                             If performance then allowed values are
+                                             *Standard Distribution System
+                                             * Point of Use
+                                             * Parallel Piping 
+                                             * Recirculation System Non-Demand Control
+                                             * Demand Recirculation Manual Control 
+                                             * Demand Recirculation Sensor Control; 
                                                 
-                                                Else if prescriptive Allowed values are 
-                                                *Standard Distribution System
-                                                * Demand Recirculation Manual Control</xsd:documentation>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                       <xsd:element name="A09_NotApplicableMessage" type="comp:NotApplicableMessage" >
-                                          <xsd:annotation>
-                                             <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC. If information is not available on the LMCC, then allow user input.  
-                                                If performance then allowed values are
-                                                *Standard Distribution System
-                                                * Point of Use
-                                                * Parallel Piping *Recirculation System Non-Demand Control
-                                                * Demand Recirculation Manual Control 
-                                                * Demand Recirculation Sensor Control; 
-                                                
-                                                Else if prescriptive Allowed values are 
-                                                *Standard Distribution System
-                                                * Demand Recirculation Manual Control;
-                                                Else if prescriptive, then value = NA;</xsd:documentation>
-                                          </xsd:annotation>
-                                       </xsd:element>
-                                    </xsd:choice>
+                                             Else if prescriptive Allowed values are 
+                                             *Standard Distribution System
+                                             * Demand Recirculation Manual Control</xsd:documentation>
+                                       </xsd:annotation>
+                                       <xsd:simpleType>
+                                          <xsd:restriction base="hvac:ResidentialDHWDwellingUnitDistributionType">
+                                             <xsd:enumeration value="CompactHotWaterDistributionSystemBasic"/>
+                                             <xsd:enumeration value="DemandRecirculation"/>
+                                             <xsd:enumeration value="DemandRecirculationManualControl"/>
+                                             <xsd:enumeration value="DemandRecirculationSensorControls"/>
+                                             <xsd:enumeration value="Other"/>
+                                             <xsd:enumeration value="PointOfUse"/>
+                                             <xsd:enumeration value="RecirculationNonDemand"/>
+                                             <xsd:enumeration value="StandardDistribution"/>
+                                             <xsd:enumeration value="StandardDistributionCentralParallelPiping"/>
+                                             <xsd:enumeration value="StandardDistributionInsulatedPipes"/>
+                                          </xsd:restriction>
+                                       </xsd:simpleType>
+                                    </xsd:element>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="A10_CompactDistributionType" type="hvac:CompactDistributionType" >
                                           <xsd:annotation>
@@ -885,7 +881,7 @@ End If</xsd:documentation>
                                              <xsd:element name="B2hp03PrescTier3" >
                                                 <xsd:annotation>
                                                    <xsd:documentation source="FieldText"></xsd:documentation>
-                                                   <xsd:documentation source="CalculationsAndRules">If prescriptive, user can select  a heat pump water heater from  the entire list of Tier 3 heat pump water heaters OR from a group of  Tier 3 water heaters that are all very similar and in the same simulation group.</xsd:documentation>
+                                                   <xsd:documentation source="CalculationsAndRules">If prescriptive, In LMCC-PLB-01E If F16b_EquipmentTypeApplies == true then allow user to enter any Tier 3 240V HPWH from the list of all Tier 3 HPWH or from a Tier 3 simulation group; Else If F16c_EquipmentTypeApplies == true then  allow user to enter any Tier 3 Or higher model from the list of all Tier 3 HPWH or from a Tier 3 simulation group.</xsd:documentation>
                                                 </xsd:annotation>
                                                 <xsd:complexType>
                                                    <xsd:sequence>
@@ -972,6 +968,30 @@ End If</xsd:documentation>
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                                                <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group:  RheemHBDR2280SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared40SimulationGroup" type="hvac:RheemPlugInShared40SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared40SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared50SimulationGroup" type="hvac:RheemPlugInShared50SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared50SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared65SimulationGroup" type="hvac:RheemPlugInShared65SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared65SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared80SimulationGroup" type="hvac:RheemPlugInShared80SimulationGroup" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared80SimulationGroup</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                       </xsd:choice>

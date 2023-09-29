@@ -742,23 +742,31 @@ End If</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Reference value from B02_ResidentialHvacSystemAreaServed</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="E03_EfficiencyType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cooling Efficiency Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference to Cooling C09_EfficiencyType in section C  Values include EER, EER2, SEER, SEER2, CEER, EERSEER, EER2SEER2</xsd:documentation>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="hvac:EfficiencyType">
-                                             <xsd:enumeration value="CEER"/>
-                                             <xsd:enumeration value="EER"/>
-                                             <xsd:enumeration value="EER2"/>
-                                             <xsd:enumeration value="EER2SEER2"/>
-                                             <xsd:enumeration value="EERSEER"/>
-                                             <xsd:enumeration value="SEER"/>
-                                             <xsd:enumeration value="SEER2"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E03_EfficiencyType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Cooling Efficiency Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference to Cooling C09_EfficiencyType if it has a value in section C  Values include EER, EER2, SEER, SEER2, CEER, EERSEER, EER2SEER2</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:EfficiencyType">
+                                                <xsd:enumeration value="CEER"/>
+                                                <xsd:enumeration value="EER"/>
+                                                <xsd:enumeration value="EER2"/>
+                                                <xsd:enumeration value="EER2SEER2"/>
+                                                <xsd:enumeration value="EERSEER"/>
+                                                <xsd:enumeration value="SEER"/>
+                                                <xsd:enumeration value="SEER2"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                       <xsd:element name="E03_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Cooling Efficiency Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If C09_NotApplicableMessage == NotApplicable because  C08_ResidentialHvacCoolingComponentType == NoCoolingComponentsAltered, result is NotApplicable stored in NotApplicableMessage;</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="E04_EfficiencyInstalledValueSEER" type="hvac:EfficiencyInstalledValueSEER">
                                           <xsd:annotation>
@@ -772,42 +780,39 @@ End If</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">User input SEER2 ;  Check that result  is GTE C10_EfficiencyMinimumValueSEER2 in section C; Else  flag as a non-compliant value and do not allow this document to be registered.</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="E04_EfficiencyInstalledValueEER" type="hvac:EfficiencyInstalledValueEER">
+                                       <xsd:element name="E04_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Cooling Efficiency Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If E03_NotApplicableMessage == NotApplicable Or E03_EfficiencyType == EER, EER2 or CEER result is NotApplicable stored in NotApplicableMessage;</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E04b_EfficiencyInstalledValueEER" type="hvac:EfficiencyInstalledValueEER">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Cooling Efficiency Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">User input EER;  Check that result  is GTE C10b_EfficiencyMinimumValueEER in section C; Else  flag as a non-compliant value and do not allow this document to be registered.</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="E04_EfficiencyEER2" type="hvac:EfficiencyEER2">
+                                       <xsd:element name="E04b_EfficiencyEER2" type="hvac:EfficiencyEER2">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Cooling Efficiency Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">User input EER2;  Check that result  is GTE C10b_EfficiencyMinimumValueEER2 in section C; Else  flag as a non-compliant value and do not allow this document to be registered.</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="E04_EfficiencyInstalledValueCEER" type="hvac:EfficiencyInstalledValueCEER">
+                                       <xsd:element name="E04b_EfficiencyInstalledValueCEER" type="hvac:EfficiencyInstalledValueCEER">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Cooling Efficiency Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">User input CEER;  Check that result  is GTE C10b_EfficiencyMinimumValueCEER in section C; Else  flag as a non-compliant value and do not allow this document to be registered.</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
+                                       <xsd:element name="E04b_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Cooling Efficiency Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If E03_NotApplicableMessage == NotApplicable Or E03_EfficiencyType == SEER or SEER2 result is NotApplicable stored in NotApplicableMessage;</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="E04b_EfficiencyType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Cooling Efficiency Value EER/EER2/CEER</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">if C10b = N/A, then report N/A; Else user input numeric: xx.x; check value must be ≥ value in C10b to comply; flag non-compliance value and do not allow this document to be registered</xsd:documentation>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="hvac:EfficiencyType">
-                                             <xsd:enumeration value="CEER"/>
-                                             <xsd:enumeration value="EER"/>
-                                             <xsd:enumeration value="EER2"/>
-                                             <xsd:enumeration value="EER2SEER2"/>
-                                             <xsd:enumeration value="EERSEER"/>
-                                             <xsd:enumeration value="SEER"/>
-                                             <xsd:enumeration value="SEER2"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="E05_CondenserManufacturer" type="comp:CondenserManufacturer">
                                           <xsd:annotation>

@@ -832,7 +832,7 @@ End If</xsd:documentation>
                                              <xsd:element name="Hpi03PrescTier3">
                                                 <xsd:annotation>
                                                    <xsd:documentation source="FieldText"/>
-                                                   <xsd:documentation source="CalculationsAndRules">If prescriptive, user can select  a heat pump water heater from  the entire list of Tier 3 heat pump water heaters OR from a group of  Tier 3 water heaters that are all very similar and in the same simulation group.</xsd:documentation>
+                                                   <xsd:documentation source="CalculationsAndRules">If prescriptive, In LMCC-PLB-01E If F16b_EquipmentTypeApplies == true then allow user to enter any Tier 3 240V HPWH from the list of all Tier 3 HPWH or from a Tier 3 simulation group; Else If F16c_EquipmentTypeApplies == true then  allow user to enter any Tier 3 Or higher model from the list of all Tier 3 HPWH or from a Tier 3 simulation group.</xsd:documentation>
                                                 </xsd:annotation>
                                                 <xsd:complexType>
                                                    <xsd:sequence>
@@ -919,6 +919,30 @@ End If</xsd:documentation>
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                                                <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group:  RheemHBDR2280SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared40SimulationGroup" type="hvac:RheemPlugInShared40SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared40SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared50SimulationGroup" type="hvac:RheemPlugInShared50SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared50SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared65SimulationGroup" type="hvac:RheemPlugInShared65SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared65SimulationGroup</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_RheemPlugInShared80SimulationGroup" type="hvac:RheemPlugInShared80SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">If prescriptive user can select  a heat pump water heater from this Tier 3 group: RheemPlugInShared80SimulationGroup</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                       </xsd:choice>
