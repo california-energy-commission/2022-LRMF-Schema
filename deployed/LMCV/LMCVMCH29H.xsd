@@ -341,60 +341,124 @@ Data is this table is copied from parent CC</xsd:documentation>
                            <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
                               <xsd:complexType>
                                  <xsd:sequence>
-                                    <xsd:element name="E01_AirSegmentName" type="hvac:AirSegmentName">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct Segment Identification</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="E02_DuctNominalDiameter" type="hvac:DuctNominalDiameter">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Nominal Diam. (in)</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="E03_DuctRValue" type="hvac:DuctRValue">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Duct R-value</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="E04_DuctLength" type="hvac:DuctLength">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Length (ft)</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="E05_InsulationRValue" type="env:InsulationRValue">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Attic insulation R-value</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="E06_InsulationThickness" type="env:InsulationThickness">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Attic Insulation Depth (in)</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
-                                    <xsd:element name="E07_InsulationType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Attic Insulation Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC  Acceptable values are Fiberglass and Cellulose</xsd:documentation>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="env:InsulationType">
-                                             <xsd:enumeration value="Cellulose"/>
-                                             <xsd:enumeration value="Fiberglass"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
-                                    <xsd:element name="E08_BuriedDuctInsulationDevice" type="hvac:BuriedDuctInsulationDevice">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Containment System or Lowered Chase</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference data from  parent CC</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E01_AirSegmentName" type="hvac:AirSegmentName">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Duct Segment Identification</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E01_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Duct Segment Identification</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E02_DuctNominalDiameter" type="hvac:DuctNominalDiameter">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Nominal Diam. (in)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E02_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Nominal Diam. (in)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E03_DuctRValue" type="hvac:DuctRValue">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Duct R-value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E03_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Duct R-value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E04_DuctLength" type="hvac:DuctLength">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Length (ft)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E04_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Length (ft)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E05_InsulationRValue" type="env:InsulationRValue">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Attic insulation R-value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E05_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Attic insulation R-value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E06_InsulationThickness" type="env:InsulationThickness">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Attic Insulation Depth (in)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E06_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Attic Insulation Depth (in)</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E07_InsulationType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Attic Insulation Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC  Acceptable values are Fiberglass and Cellulose</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="env:InsulationType">
+                                                <xsd:enumeration value="Cellulose"/>
+                                                <xsd:enumeration value="Fiberglass"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                       <xsd:element name="E07_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Attic Insulation Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="E08_BuriedDuctInsulationDevice" type="hvac:BuriedDuctInsulationDevice">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Containment system or Lowered Chase</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="E08_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Containment system or Lowered Chase</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference data from parent CC which allows NotApplicable</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="E09_DuctBuriedLevel" type="hvac:DuctBuriedLevel">
                                           <xsd:annotation>
