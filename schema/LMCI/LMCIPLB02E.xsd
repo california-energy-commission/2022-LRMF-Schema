@@ -205,18 +205,16 @@ This  section is required if the parent CC has any non-HPWH non-HERS systems, Re
                                        <xsd:element name="A10_CompactDistributionType" type="hvac:CompactDistributionType" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Compact Distrib.</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">reference values from LMCC.  If information is not available on the LMCC, then allow user input. Allowed values are 
-                                                *Basic
-                                                *None;
+                                             <xsd:documentation source="CalculationsAndRules">If A09_ResidentialDHWDwellingUnitDistributionType == CompactHotWaterDistributionSystemBasic result = BasicType 
+Else reference values from LMCC; If information is not available on the LMCC, result = NA 
+ 
                                              </xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="A10_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Compact Distrib.</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">reference values from LMCC.  If information is not available on the LMCC, then allow user input. Allowed values are 
-                                                *Basic
-                                                *None;
+                                             <xsd:documentation source="CalculationsAndRules">reference values from LMCC.  If information is not available on the LMCC, result = NA End If
                                              </xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>

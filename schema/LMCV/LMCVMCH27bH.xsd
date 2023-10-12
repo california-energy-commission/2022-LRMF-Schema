@@ -78,12 +78,11 @@
                   <xsd:element name="A02_ResidentialBuildingType" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Building Type</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Calculated field: Referenced data from LMCC-PRF, allowed values: MultiFamily display term Multifamily; Or allow user to pick NonDwellingUnit display term Non-dwelling Unit</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Calculated field: Referenced data from LMCC-PRF, allowed values: MultiFamily display term Multifamily;</xsd:documentation>
                      </xsd:annotation>
                      <xsd:simpleType>
                         <xsd:restriction base="com:ResidentialBuildingType">
                            <xsd:enumeration value="MultiFamily"/>
-                           <xsd:enumeration value="NonDwellingUnit"/>
                         </xsd:restriction>
                      </xsd:simpleType>
                   </xsd:element>
