@@ -242,9 +242,9 @@ If A04_WholeBuildlingOccuapancy==  MultiFamilyMixedUseLT4
 Switch (A07_DuctSystemLeakageComplianceCategory)  
 case Alteration:  
 If B08_LeakageTestMethod == TotalLeakage 
-result = 0.10 ;
+result = 0.15 ;
 Else If B08_LeakageTestMethod == LeakageToOutside 
-result = 0.07 
+result = 0.10 
 Else error message if invalid entries for arguments
 End If
 

@@ -239,7 +239,7 @@
                         <xsd:documentation source="CalculationsAndRules">Calculated field:  All conditions include B07_LeakageTestCondition==TestFinal And B08_LeakageTestMethod==TotalLeakage, the only values allowed for Alteration using Smoke Test or Replacement using Smoke Test
 If If A04_WholeBuildlingOccuapancy ==  MultiFamilyMixedUseLT4
 If A07_DuctSystemLeakageComplianceCategory == Alteration using Smoke Test 
-result = 0.10 
+result = 0.15 
 Else If A07_DuctSystemLeakageComplianceCategory == Replacement Using Smoke Test 
 result = 0.12 
 Else provide applicable error message for invalid entries
