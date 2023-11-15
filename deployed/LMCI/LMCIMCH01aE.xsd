@@ -204,7 +204,7 @@ For choice HeatPumpHeatingCooling, display text: Heat Pump Heating and Cooling  
                                     <xsd:element name="B03_ResidentialHeatingSystemType" type="hvac:ResidentialHeatingSystemType">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Heating System Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If  parent CC-PRF  Y02_ResidentialHeatingSystemType == VCHP, 
+                                          <xsd:documentation source="CalculationsAndRules">If  parent CC-PRF  Hvacdwell03b_ResidentialHeatingSystemType == VCHP, 
 allow user to select from list: VCHP_IndoorUnitDucted,  VCHP_IndoorUnitDuctless, VCHP_IndoorUnitDuctedAndDuctless
 Else  auto fill from parent CC-PRF;   
 End If
@@ -214,7 +214,7 @@ Note: assuming the VCHP and multisplit system types will be included in CBECC, t
                                     <xsd:element name="B04_ResidentialCoolingSystemType" type="hvac:ResidentialCoolingSystemType">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Cooling System Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Y02_ResidentialHeatingSystemType == VCHP, 
+                                          <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Hvacdwell03b_ResidentialHeatingSystemType == VCHP, 
 allow user to select from list: VCHP_IndoorUnitDucted,  VCHP_IndoorUnitDuctless, VCHP_IndoorUnitDuctedAndDuctless
 Else  auto fill from parent CC-PRF;   
 End If
@@ -247,7 +247,7 @@ End If</xsd:documentation>
                                        <xsd:element name="B06_DuctSystemTypePerf">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Distribution System Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If parent CC-PRF  Y02_ResidentialHeatingSystemType == VCHP_IndoorUnitDucted Or VCHP_IndoorUnitDuctedAndDuctless Or  VCHP_IndoorUnitDuctless
+                                             <xsd:documentation source="CalculationsAndRules">If parent CC-PRF  Hvacdwell03b_ResidentialHeatingSystemType == VCHP_IndoorUnitDucted Or VCHP_IndoorUnitDuctedAndDuctless Or  VCHP_IndoorUnitDuctless
 result = NotApplicable stored in NotApplicableMessage
 Else Auto filled text: referenced from parent CC-PRF
 End If</xsd:documentation>

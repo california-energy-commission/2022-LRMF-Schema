@@ -89,12 +89,39 @@
                                           </xsd:restriction>
                                        </xsd:simpleType>
                                     </xsd:element>
-                                    <xsd:element name="A04_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC Allowed values are: BoilerWaterHeater display term: Boiler, IndirectWaterHeating display term:  Indirect, InstantaneousCommercial display term: Commercial Instantaneous, InstantaneousResDutyCommercial display term: Residential-Duty Commercial Instantaneous, InstantaneousConsumer display term: Consumer Instantaneous,   StorageCommercial display term: Commercial Storage, StorageResDutyCommercial display term: Residential-Duty Commercial Storage,   StorageConsumer display term: Consumer Storage</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="A04_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from parent CC Allowed values are: BoilerWaterHeater display term: Boiler, IndirectWaterHeating display term:  Indirect, InstantaneousCommercial display term: Commercial Instantaneous, InstantaneousResDutyCommercial display term: Residential-Duty Commercial Instantaneous, InstantaneousConsumer display term: Consumer Instantaneous,   StorageCommercial display term: Commercial Storage, StorageResDutyCommercial display term: Residential-Duty Commercial Storage,   StorageConsumer display term: Consumer Storage</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="A04_WaterHeaterType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC; Use this choice for prescriptive LMCC-PLB if the values are one of the following: BoilerCommercialGTE1MMBtu, BoilerCommercialLT1MMBtu, BoilerResDutyCommercial, CentralHeatPumpWH, InstantaneousConsumerElectric, StorageCommercialElectric, StorageConsumerElectric Or TableTopElectric</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:WaterHeaterType">
+                                                <xsd:enumeration value="BoilerCommercialGTE1MMBtu"/>
+                                                <xsd:enumeration value="BoilerResDutyCommercial"/>
+                                                <xsd:enumeration value="BoilerWaterHeater"/>
+                                                <xsd:enumeration value="CentralHeatPumpWH"/>
+                                                <xsd:enumeration value="BoilerCommercialLT1MMBtu"/>
+                                                <xsd:enumeration value="InstantaneousCommercial"/>
+                                                <xsd:enumeration value="InstantaneousConsumer"/>
+                                                <xsd:enumeration value="InstantaneousConsumerElectric"/>
+                                                <xsd:enumeration value="InstantaneousResDutyCommercial"/>
+                                                <xsd:enumeration value="StorageCommercial"/>
+                                                <xsd:enumeration value="StorageCommercialElectric"/>
+                                                <xsd:enumeration value="StorageConsumer"/>
+                                                <xsd:enumeration value="StorageConsumerElectric"/>
+                                                <xsd:enumeration value="StorageResDutyCommercial"/>
+                                                <xsd:enumeration value="TableTopElectric"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="A05_WaterHeaterTotalSystemCount" type="hvac:WaterHeaterTotalSystemCount">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText"># of Like (or Identical) Water Heaters in System</xsd:documentation>
@@ -347,12 +374,39 @@ Require one row of data for each water heater identified in Section_A TableDesig
                                           </xsd:restriction>
                                        </xsd:simpleType>
                                     </xsd:element>
-                                    <xsd:element name="B04_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference value from A04</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="B04_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference value from A04_ResidentialWaterHeaterType</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="B04_WaterHeaterType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference value from A04_WaterHeaterType</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:WaterHeaterType">
+                                                <xsd:enumeration value="BoilerCommercialGTE1MMBtu"/>
+                                                <xsd:enumeration value="BoilerResDutyCommercial"/>
+                                                <xsd:enumeration value="BoilerWaterHeater"/>
+                                                <xsd:enumeration value="CentralHeatPumpWH"/>
+                                                <xsd:enumeration value="BoilerCommercialLT1MMBtu"/>
+                                                <xsd:enumeration value="InstantaneousCommercial"/>
+                                                <xsd:enumeration value="InstantaneousConsumer"/>
+                                                <xsd:enumeration value="InstantaneousConsumerElectric"/>
+                                                <xsd:enumeration value="InstantaneousResDutyCommercial"/>
+                                                <xsd:enumeration value="StorageCommercial"/>
+                                                <xsd:enumeration value="StorageCommercialElectric"/>
+                                                <xsd:enumeration value="StorageConsumer"/>
+                                                <xsd:enumeration value="StorageConsumerElectric"/>
+                                                <xsd:enumeration value="StorageResDutyCommercial"/>
+                                                <xsd:enumeration value="TableTopElectric"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="B05_WaterHeaterTotalSystemCount" type="hvac:WaterHeaterTotalSystemCount">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText"># of Like (or Identical) Water Heaters in System</xsd:documentation>

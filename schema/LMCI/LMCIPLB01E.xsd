@@ -525,12 +525,39 @@ End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="C03_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType" >
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference value from B03_ResidentialWaterHeaterType</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="C03_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference value from B03_ResidentialWaterHeaterType</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="C03_WaterHeaterType" >
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference value from B03_WaterHeaterType</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:WaterHeaterType">
+                                                <xsd:enumeration value="BoilerCommercialGTE1MMBtu"/>
+                                                <xsd:enumeration value="BoilerResDutyCommercial"/>
+                                                <xsd:enumeration value="BoilerWaterHeater"/>
+                                                <xsd:enumeration value="CentralHeatPumpWH"/>
+                                                <xsd:enumeration value="BoilerCommercialLT1MMBtu"/>
+                                                <xsd:enumeration value="InstantaneousCommercial"/>
+                                                <xsd:enumeration value="InstantaneousConsumer"/>
+                                                <xsd:enumeration value="InstantaneousConsumerElectric"/>
+                                                <xsd:enumeration value="InstantaneousResDutyCommercial"/>
+                                                <xsd:enumeration value="StorageCommercial"/>
+                                                <xsd:enumeration value="StorageCommercialElectric"/>
+                                                <xsd:enumeration value="StorageConsumer"/>
+                                                <xsd:enumeration value="StorageConsumerElectric"/>
+                                                <xsd:enumeration value="StorageResDutyCommercial"/>
+                                                <xsd:enumeration value="TableTopElectric"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="C04_WaterHeaterTotalSystemCount" type="hvac:WaterHeaterTotalSystemCount" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Number of Water Heaters in System</xsd:documentation>

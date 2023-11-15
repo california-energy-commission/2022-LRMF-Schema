@@ -156,10 +156,11 @@
                         <xsd:documentation source="CalculationsAndRules">Auto filled text: referenced from MCH23</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
-                  <xsd:element name="A12_CFVCS_Type" type="comp:CFVCS_Type">
+                  <xsd:element name="A12_CFVCS_Type" type="comp:CFVCS_Type" minOccurs="0" maxOccurs="0">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Central Fan Ventilation Cooling System Status</xsd:documentation>
                         <xsd:documentation source="CalculationsAndRules">Auto filled text: referenced from MCH23</xsd:documentation>
+                        <xsd:documentation source="MaxOccurs">NOT IMPLEMENTED If maxOccurs = "0"</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
@@ -191,7 +192,7 @@
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Mch22c Variant</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">MCH22c Forced Air System Fan Efficacy Measurement - Newly Installed Non-Zoned or Zoned Multi-Speed Compressor Systems with Central Fan Ventilation Cooling</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">If MCH23 variant == MCH23a variant result  = MCH-22a; Else If MCH23 variant == MCH23b variant result  = MCH-22b; Else If MCH23 variant == MCH23e variant result  = MCH-22c;  Else If MCH23 variant == MCH23f variant result  = MCH-22d; Else If  MCH23 variant == MCH23c, And A07_ResidentialCoolingZoneType == ZoneControlled And A06_CondenserSpeedType == SingleSpeed variant result  = MCH-22b  Else variant result  = MCH-22a;  Else If  MCH23 variant == MCH23d, And A12_CFVCS_Type == VariableCFVCS Or FixedCFVCS variant result  = MCH-22c  Else variant result  = MCH-22a;  Use the variant result for the remainder of this compliance document.</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">If MCH23 variant == MCH23a variant result  = MCH-22a; Else If MCH23 variant == MCH23b variant result  = MCH-22b; Else If MCH23 variant == MCH23e variant result  = MCH-22c;  Else If MCH23 variant == MCH23f variant result  = MCH-22d; Else If  MCH23 variant == MCH23c, And A07_ResidentialCoolingZoneType == ZoneControlled And A06_CondenserSpeedType == SingleSpeed variant result  = MCH-22b  Else variant result  = MCH-22a;  Else If  MCH23 variant == MCH23d, [NOT IMPLEMENTED And A12_CFVCS_Type == VariableCFVCS Or FixedCFVCS] variant result  = MCH-22c  Else variant result  = MCH-22a;  Use the variant result for the remainder of this compliance document.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
@@ -273,7 +274,7 @@
                   <xsd:element name="D03_FanEfficacyRequired" type="hvac:FanEfficacyRequired">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Required Fan Efficacy (Watts/cfm)</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Calculated field:  If parent document == MCH-01a  reference value from Mch01a C12_VentilationCoolingFanEfficacy; Else If parent document == MCH-01d  reference value from Mch01d C12_FanEfficacy;</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Calculated field:  If parent document == MCH-01a  reference value from Mch01a C12_VentilationCoolingFanEfficacy; Else If parent document == MCH-01d  reference value from Mch01d C12_FanEfficacy; Else If parent document = MCH-01b Or MCH-01c result = C03_FanEfficacyRequired from this document</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="D04_FanEfficacy" type="hvac:FanEfficacy">
