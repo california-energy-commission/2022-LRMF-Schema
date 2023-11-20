@@ -284,6 +284,7 @@ End If</xsd:documentation>
                                        </xsd:annotation>
                                        <xsd:simpleType>
                                           <xsd:restriction base="hvac:ThermostatType">
+                                             <xsd:enumeration value="NonSetbackThermostat"/>
                                              <xsd:enumeration value="OccupantControlledSmartThermostat"/>
                                              <xsd:enumeration value="SetbackThermostat"/>
                                           </xsd:restriction>
@@ -751,11 +752,12 @@ Flag non-default values and report in project status notes field; a revised pare
                                     <xsd:element name="D08_ThermostatType">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">SC System Thermostat Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference value from B07 as default;   allow user to override the default and select one from list. Choices for ThermostatType: SetbackThermostat , OccupantControlledSmartThermostat,  EnergyManagementSystem</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference value from B07 as default;   allow user to override the default and select one from list. Choices for ThermostatType: SetbackThermostat, NonSetbackThermostat, OccupantControlledSmartThermostat,  EnergyManagementSystem</xsd:documentation>
                                        </xsd:annotation>
                                        <xsd:simpleType>
                                           <xsd:restriction base="hvac:ThermostatType">
                                              <xsd:enumeration value="EnergyManagementSystem"/>
+                                             <xsd:enumeration value="NonSetbackThermostat"/>
                                              <xsd:enumeration value="OccupantControlledSmartThermostat"/>
                                              <xsd:enumeration value="SetbackThermostat"/>
                                           </xsd:restriction>

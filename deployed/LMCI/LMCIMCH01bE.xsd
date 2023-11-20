@@ -197,45 +197,46 @@ For this table every field except the last should reference values from parent C
                                     <xsd:element name="B03_ResidentialHvacSystemConditionedArea" type="hvac:ResidentialHvacSystemConditionedArea">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">CFA served by this SC System (ft<d:sup>2</d:sup>)</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default.</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required;</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B04_DuctedSystem" type="comp:DuctedSystem">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Is the SC system a ducted system?</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default.  Display Yes and No to represent Boolean values true and false</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required;  Display Yes and No to represent Boolean values true and false</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B05_IncludesComponentWithRefrigerant" type="comp:IncludesComponentWithRefrigerant">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Does work include installing a refrigerant containing component?</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. 
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required;
 Display Yes and No to represent Boolean values true and false</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B06_InstallingNewComponents" type="comp:InstallingNewComponents">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Does work include installing new SC system components?</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default.   
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required;  
 Display Yes and No to represent Boolean values true and false</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B07_Installing25PlusLinearFeetDucts" type="comp:Installing25PlusLinearFeetDucts">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Does work include installing more than 25 feet of ducts?</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default.   Display Yes and No to represent Boolean values true and false</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required;  Display Yes and No to represent Boolean values true and false</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B08_DuctSystemAllAccessibleForSealingWithPlus75PercentNewReplaced" type="comp:DuctSystemAllAccessibleForSealingWithPlus75PercentNewReplaced">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Does work include installing an "entirely new duct system"?</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default.   Display Yes and No to represent Boolean values true and false</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required;  Display Yes and No to represent Boolean values true and false</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B09_AllNewOrReplacedHvacSystem" type="comp:AllNewOrReplacedHvacSystem">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Does work include installing an "entirely new SC system"?</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default.  Display Yes and No to represent Boolean values true and false</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference values from parent CC as default. allow user to override the default and input a new value;  flag non-default values and report in project status notes field; a revised CC may be required; Display Yes and No to represent Boolean values true and false; 
+If result == true And A06_HvacLoadCalculationMethod == NotApplicableEquipmentChangeout Then do not allow user to proceed.</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:element name="B10_ResidentialHvacAlterationType" type="hvac:ResidentialHvacAlterationType">
