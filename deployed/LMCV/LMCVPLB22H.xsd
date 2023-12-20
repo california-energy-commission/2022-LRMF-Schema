@@ -93,7 +93,9 @@
                                        <xsd:element name="A04_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from parent CC Allowed values are: BoilerWaterHeater display term: Boiler, IndirectWaterHeating display term:  Indirect, InstantaneousCommercial display term: Commercial Instantaneous, InstantaneousResDutyCommercial display term: Residential-Duty Commercial Instantaneous, InstantaneousConsumer display term: Consumer Instantaneous,   StorageCommercial display term: Commercial Storage, StorageResDutyCommercial display term: Residential-Duty Commercial Storage,   StorageConsumer display term: Consumer Storage</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from parent CC Allowed values are: BoilerWaterHeater display term: Boiler, IndirectWaterHeating display term:  Indirect, InstantaneousCommercial display term: Commercial Instantaneous, 
+InstantaneousResDutyCommercial display term: Residential-Duty Commercial Instantaneous, InstantaneousConsumer display term: Consumer Instantaneous,   StorageCommercial display term: Commercial Storage, StorageResDutyCommercial display term: Residential-Duty Commercial Storage,   StorageConsumer display term: Consumer Storage;
+If LMCC-PRF sends Water19_NotApplicableMessage because it is an existing unchanged water heater, assign the type "ExistingWaterHeater"</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="A04_WaterHeaterType">

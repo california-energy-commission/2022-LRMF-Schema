@@ -335,19 +335,27 @@ result = false display term None
 End If</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="B11_StatusEAA">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">SC System Status</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Auto filled reference value from parent CC-PRF for this system; Values are: New display text New, Altered display text Altered, Existing  display text Existing</xsd:documentation>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="com:StatusEAA">
-                                             <xsd:enumeration value="Altered"/>
-                                             <xsd:enumeration value="Existing"/>
-                                             <xsd:enumeration value="New"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="B11_StatusEAA">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">SC System Status</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Auto filled reference value from parent CC-PRF for this system if available; Values are: New display text New, Altered display text Altered, Existing  display text Existing</xsd:documentation>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="com:StatusEAA">
+                                                <xsd:enumeration value="Altered"/>
+                                                <xsd:enumeration value="Existing"/>
+                                                <xsd:enumeration value="New"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                       <xsd:element name="B11_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">SC System Status</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Auto filled reference value from parent CC-PRF.  If value is not available from parent CC-PRF, result = N/A stored in NotAppplicableMessage</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="B12_EAA_DuctSystemStatus" type="comp:EAA_DuctSystemStatus">
                                           <xsd:annotation>
@@ -2696,8 +2704,8 @@ Else If B03_ResidentialHeatingSystemType Or B04_ResidentialCoolingSystemType == 
 result = false; 
  
 Else If B04_ResidentialCoolingSystemType == SmallDuctHighVelocityAC And C06_EfficiencyMinimumValueSEER Or C06_EfficiencyMinimumValueSEER2  IsPresent And GT 12 
-result = true; 
-Else If C06_EfficiencyMinimumValueSEER Or C06_EfficiencyMinimumValueSEER2 IsPresent And GT 14, 
+result = true;
+Else If C06_EfficiencyMinimumValueSEER IsPresent And GT 15.0 Or C06_EfficiencyMinimumValueSEER2 IsPresent And GT 14.3 
 result = true;  
  
 Else If B04_ResidentialCoolingSystemType == CentralPackagedAC And If  C07_EfficiencyMinimumValueEER Or  C07_EfficiencyMinimumValueEER2 IsPresent And GT 11.0 

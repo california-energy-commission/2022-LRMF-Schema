@@ -94,13 +94,15 @@ This  section is required if the parent CC has any non-HPWH non-HERS systems, Re
                                        <xsd:element name="A04_ResidentialWaterHeaterType" type="hvac:ResidentialWaterHeaterType">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from parent CC Allowed values are: BoilerWaterHeater display term: Boiler,  IndirectWaterHeating display term:  Indirect, InstantaneousCommercial display term: Commercial Instantaneous, InstantaneousResDutyCommercial display term: Residential-Duty Commercial Instantaneous, InstantaneousConsumer display term: Consumer Instantaneous,   StorageCommercial display term: Commercial Storage, StorageResDutyCommercial display term: Residential-Duty Commercial Storage,   StorageConsumer display term: Consumer Storage</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from parent CC Allowed values are: BoilerWaterHeater display term: Boiler,  IndirectWaterHeating display term:  Indirect, InstantaneousCommercial display term: Commercial Instantaneous, InstantaneousResDutyCommercial display term: Residential-Duty Commercial Instantaneous, InstantaneousConsumer display term: Consumer Instantaneous,   
+StorageCommercial display term: Commercial Storage, StorageResDutyCommercial display term: Residential-Duty Commercial Storage,   StorageConsumer display term: Consumer Storage;  If LMCC-PRF sends Water19_NotApplicableMessage because it is an existing unchanged water heater, assign the type "ExistingWaterHeater".</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="A04_WaterHeaterType">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Water-Heater Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC; Use this choice for prescriptive LMCC-PLB if the values are one of the following: BoilerCommercialGTE1MMBtu, BoilerCommercialLT1MMBtu, BoilerResDutyCommercial, CentralHeatPumpWH, InstantaneousConsumerElectric, StorageCommercialElectric, StorageConsumerElectric Or TableTopElectric</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC; Use this choice for prescriptive LMCC-PLB if the values are one of the following: BoilerCommercialGTE1MMBtu, BoilerCommercialLT1MMBtu, BoilerResDutyCommercial, CentralHeatPumpWH, 
+InstantaneousConsumerElectric, StorageCommercialElectric, StorageConsumerElectric Or TableTopElectric.</xsd:documentation>
                                           </xsd:annotation>
                                           <xsd:simpleType>
                                              <xsd:restriction base="hvac:WaterHeaterType">

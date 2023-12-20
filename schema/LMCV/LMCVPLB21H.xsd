@@ -363,7 +363,8 @@ End If</xsd:documentation>
                                     <xsd:element name="Hpd04_TankLocation" type="hvac:TankLocation" >
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Primary Tank Location</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from LMCC.</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">If performance LMCC If WaterCHPWH07_TankLocation IsPresent assign value Else If WaterCHPWH07_ZoneSystemName IsPresent assign TankZone End If; 
+Else If prescriptive LMCC user input; allowed values are: Attic, Conditioned, CrawlSpace, Garage, Outside, TankZone, Unconditioned End If </xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">

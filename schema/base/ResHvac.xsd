@@ -11235,6 +11235,7 @@
             <dtyp:displayterm value="StorageLarge">Large Storage</dtyp:displayterm>
             <dtyp:displayterm value="StorageResDutyCommercial">Residential-Duty Commercial Storage</dtyp:displayterm>
             <dtyp:displayterm value="StorageSmall">Small Storage</dtyp:displayterm>
+            <dtyp:displayterm value="ExistingWaterHeater">Existing Water Heater</dtyp:displayterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -11253,6 +11254,7 @@
          <xsd:enumeration value="StorageLarge"/>
          <xsd:enumeration value="StorageResDutyCommercial"/>
          <xsd:enumeration value="StorageSmall"/>
+         <xsd:enumeration value="ExistingWaterHeater"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialWaterHeatingSystemCount">
