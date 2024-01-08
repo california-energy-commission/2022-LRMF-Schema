@@ -184,10 +184,11 @@ If LMCC-PRF sends Water19_NotApplicableMessage because it is an existing unchang
                                           <xsd:documentation source="CalculationsAndRules">If water heating system in parent CC is Central DHW system result = true display term Yes Else result = false display term NA</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="A10_ResidentialDHWDwellingUnitDistributionType" type="hvac:ResidentialDHWDwellingUnitDistributionType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">If performance parent CC, Then 
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="A10_ResidentialDHWDwellingUnitDistributionType" type="hvac:ResidentialDHWDwellingUnitDistributionType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference value from LMCC; If performance parent CC, Then 
 If A09_IsDHW_Central == false  allowed values are: StandardDistribution display term: Standard Distribution System; PointOfUse display term: Point Of Use, StandardDistributionCentralParallelPiping display term: Parallel Piping;  RecirculationNonDemand display term:  Recirculation System Non-Demand Control; DemandRecirculationManualControl display term: Demand Recirculation Manual Control;  DemandRecirculationSensorControls display term: Demand Recirculation Sensor Control; StandardDistributionInsulatedPipesHERS display term HERS Verified Pipe Insulation credit, StandardDistributionCentralParallelPipingHERS display term HERS Verified Parallel Piping, DemandRecirculationManualControlHERS display term HERS Verified Demand Recirculation Manual Control, DemandRecirculationSensorControlsHERSHERS display term Verified Demand Recirculation Sensor Controls; 
 
 Else  If A09_IsDHW_Central == true allowed values are: StandardDistribution. Display term: Standard Distribution System, StandardDistributionInsulatedPipesHERS display term HERS Verified Pipe Insulation credit;  
@@ -195,8 +196,15 @@ End If
 
 Else If prescriptive parent CC  allowed values are: StandardDistribution display term: Standard Distribution System; DemandRecirculationManualControl display term: Demand Recirculation Manual Control;  DemandRecirculation display term Demand Recirculation;  
 End If</xsd:documentation>
-                                       </xsd:annotation>
-                                    </xsd:element>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="A10_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If parent is LMCC-PRF And value is N/A result = N/A stored in the NotApplicableMessage;</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:element name="A11_CompactDistributionType" type="hvac:CompactDistributionType">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Compact Distrib.</xsd:documentation>

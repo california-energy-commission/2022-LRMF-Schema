@@ -211,11 +211,12 @@
                                        <xsd:element name="B09_EfficiencyType">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If Performance reference values from LMCC-PRF for efficiency type  Allowed values are: AFUE, ThermalEfficiency, Uniform Energy Factor; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Performance reference values from LMCC-PRF for efficiency type  Allowed values are: AFUE, COP, ThermalEfficiency, Uniform Energy Factor; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
                                           </xsd:annotation>
                                           <xsd:simpleType>
                                              <xsd:restriction base="hvac:EfficiencyType">
                                                 <xsd:enumeration value="AFUE"/>
+                                                <xsd:enumeration value="COP"/>
                                                 <xsd:enumeration value="ThermalEfficiency"/>
                                                 <xsd:enumeration value="UniformEnergyFactor"/>
                                              </xsd:restriction>
@@ -224,7 +225,7 @@
                                        <xsd:element name="B09_NotApplicableMessage" type="comp:NotApplicableMessage">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If Performance reference values from LMCC-PRF for efficiency type  Allowed values are: AFUE, EnergyFactor, ThermalEfficiency, Uniform Energy Factor; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Performance reference values from LMCC-PRF for efficiency type  Allowed values are: AFUE, COP, EnergyFactor, ThermalEfficiency, Uniform Energy Factor; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
@@ -251,6 +252,12 @@
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">If Performance reference values from LMCC-PRF Else result = N/A stored in NotApplicableMessage</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="B10_EfficiencyCOP" type="hvac:EfficiencyCOP">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency Value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Performance, reference value from LMCC-PRF; Else result = N/A stored in NotApplicableMessage</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="B10_NotApplicableMessage" type="comp:NotApplicableMessage">
@@ -327,6 +334,12 @@
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Hpd02_CentralHPWHCompressorType" type="hvac:CentralHPWHCompressorType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Brand/Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If performance LMCC reference value from LMCC-PRF and if value is CentralHPWHCompressorType,store in this choice End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
                                        <xsd:element name="Hpd02_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
@@ -336,8 +349,7 @@
                                        <xsd:element name="Hpd02_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If performance LMCC reference value from LMCC-PRF and store in HeatPumpWaterHeaterModel
-End If</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If performance LMCC reference value from LMCC-PRF and if value is HeatPumpWaterHeaterModel, store in this choice End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
@@ -615,11 +627,12 @@ If prescriptive, this field is not required; Else If performance reference value
                                     <xsd:element name="C09_EfficiencyType">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference value from B09_EfficiencyType Else If Prescriptive user selects from list: AFUE, ThermalEfficiency, Uniform Energy Factor;</xsd:documentation>
+                                          <xsd:documentation source="CalculationsAndRules">Reference value from B09_EfficiencyType Else If Prescriptive user selects from list: AFUE, COP, ThermalEfficiency, Uniform Energy Factor;</xsd:documentation>
                                        </xsd:annotation>
                                        <xsd:simpleType>
                                           <xsd:restriction base="hvac:EfficiencyType">
                                              <xsd:enumeration value="AFUE"/>
+                                             <xsd:enumeration value="COP"/>
                                              <xsd:enumeration value="EnergyFactor"/>
                                              <xsd:enumeration value="ThermalEfficiency"/>
                                              <xsd:enumeration value="UniformEnergyFactor"/>
@@ -649,6 +662,12 @@ If prescriptive, this field is not required; Else If performance reference value
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">User input value; If value is GTE B10_ThermalEfficiency.  N/A is only allowed  If B10_NotApplicableMessage == N/A</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="C10_EfficiencyCOP" type="hvac:EfficiencyCOP">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Heating Efficiency Value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">User input value; If value is GTE B10 value for efficiency, it complies. N/A is only allowed  If B10_NotApplicableMessage == N/A</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C10_NotApplicableMessage" type="comp:NotApplicableMessage">
@@ -731,19 +750,25 @@ If prescriptive, this field is not required; Else If performance reference value
                                        </xsd:annotation>
                                     </xsd:element>
                                     <xsd:choice maxOccurs="1">
+                                       <xsd:element name="Hpi02_CentralHPWHCompressorType" type="hvac:CentralHPWHCompressorType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Brand/Model</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If performance, reference value from Hpd02_CentralHPWHCompressorType as default and If user does not override it, store it in this choice; 
+Else If user chooses to override default, allow selection of an equivalent system based on the simulated equipment in Hpd12_HeatPumpWaterHeaterSimulationGroup End If</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
                                        <xsd:element name="Hpi02_HeatPumpWaterHeaterBrand" type="hvac:HeatPumpWaterHeaterBrand">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If performance, user input is equal to B2-02 as default, and allow user to override with an equivalent system based on the simulated equipment in B2-12</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If performance, reference value from Hpd02_HeatPumpWaterHeaterBrand as default, and If user does not override it, store it in this choice;
+ Else If user chooses to override default, allow selection of an equivalent system based on the simulated equipment in Hpd12_HeatPumpWaterHeaterSimulationGroup End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="Hpi02_HeatPumpWaterHeaterModel" type="hvac:HeatPumpWaterHeaterModel">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Equipment Make and Model</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If Performance LMCC, reference value from Hpd02_HeatPumpWaterHeaterModel as default
-If user does not override it, store it in HeatPumpWaterHeaterModel  
-Else If user chooses to override default, allow selection of an equivalent system based on the simluated equipment selected in Hpd12_HeatPumpWaterHeaterSimulationGroup
-End If</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If Performance reference value from Hpd02_HeatPumpWaterHeaterModel as default and If user does not override it, store it in this choice;   
+Else If user chooses to override default, allow selection of an equivalent system based on the simluated equipment selected in Hpd12_HeatPumpWaterHeaterSimulationGroup End If</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="Hpi02_NyleC25A_SP" type="hvac:NyleC25A_SP">

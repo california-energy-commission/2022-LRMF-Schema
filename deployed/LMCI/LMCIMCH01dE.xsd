@@ -188,7 +188,7 @@ Require one row of data in this table for each of the SC Systems identified on t
                            <xsd:element name="Row" minOccurs="1" maxOccurs="unbounded">
                               <xsd:complexType>
                                  <xsd:sequence>
-                                    <xsd:element name="B01_ResidentialSpaceConditioningSystemName" type="hvac:ResidentialSpaceConditioningSystemName">
+                                    <xsd:element name="B01_ResidentialSpaceConditioningSystemName" type="hvac:ResidentialSpaceConditioningSystemName" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">SC System ID/Name from parent CC-PRF</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">Auto filled text: referenced from parent CC-PRF</xsd:documentation>
@@ -200,7 +200,7 @@ Require one row of data in this table for each of the SC Systems identified on t
                                           <xsd:documentation source="CalculationsAndRules">Auto filled text: referenced from parent CC-PRF</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="B03_ResidentialHeatingSystemType" type="hvac:ResidentialHeatingSystemType">
+                                    <xsd:element name="B03_ResidentialHeatingSystemType" type="hvac:ResidentialHeatingSystemType" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Heating System Type</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If parent CC-PRF  Hvacdwell03b_ResidentialHeatingSystemType == VCHP, 
@@ -210,7 +210,7 @@ End If
 Note: assuming new VCHP  and multisplit system types: VCHP_IndoorUnitDucted, VCHP_IndoorUnitDuctless and VCHP_IndoorUnitDuctedAndDuctless, DuctedMultiSplitHP, DuctlessMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctedMiniSplitHP  will be  implemented in CBECC and available in the parent CC-PRF schema.</xsd:documentation>
                                        </xsd:annotation>
                                     </xsd:element>
-                                    <xsd:element name="B04_ResidentialCoolingSystemType" type="hvac:ResidentialCoolingSystemType">
+                                    <xsd:element name="B04_ResidentialCoolingSystemType" type="hvac:ResidentialCoolingSystemType" maxOccurs="unbounded">
                                        <xsd:annotation>
                                           <xsd:documentation source="FieldText">Cooling System Type</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Hvacdwell03b_ResidentialCoolingSystemType == VCHP, 
@@ -511,7 +511,7 @@ Require one row of data for each SC System in Section B;  do not allow user to o
                                        </xsd:element>
                                     </xsd:choice>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="C06a_EfficiencyType">
+                                       <xsd:element name="C06a_EfficiencyType" maxOccurs="2">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Cooling Efficiency Type</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">Auto fill from  parent CC-PRF  for this system name if data is available
@@ -616,13 +616,19 @@ End If</xsd:documentation>
                                        </xsd:element>
                                     </xsd:choice>
                                     <xsd:choice maxOccurs="1">
-                                       <xsd:element name="C10_DuctRValue" type="hvac:DuctRValue">
+                                       <xsd:element name="C10_DuctRValue" type="hvac:DuctRValue" maxOccurs="2">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled Duct R-Value</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field: If  parent CC-PRF  flags requirement for a Verified Duct System Design then result is RvalueVerifiedDuctSystem, display text Verified Duct System Design; else If  parent CC-PRF  provides R-value for this system name, result is that R-value; else result is N/A stored in the NotApplicableMessage.</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field: If parent CC-PRF there maybe 2 values: one for supply and one for return; If  parent CC-PRF  flags requirement for a Verified Duct System Design then result is RvalueVerifiedDuctSystem, display text Verified Duct System Design; else If  parent CC-PRF  provides R-value for this system name, result is that R-value; else result is N/A stored in the NotApplicableMessage.</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
-                                       <xsd:element name="C10_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                       <xsd:element name="C10_DuctRValueNum" type="hvac:DuctRValueNum" maxOccurs="2">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Modeled Duct R-Value</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field: If parent CC-PRF there maybe 2 values: one for supply and one for return; If parent CC-PRF provides R-value numeric value instead of R-value string, use this choice;</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                       <xsd:element name="C10_NotApplicableMessage" type="comp:NotApplicableMessage" maxOccurs="2">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Modeled R-Value</xsd:documentation>
                                              <xsd:documentation source="CalculationsAndRules">Calculated field: If  parent CC-PRF  flags requirement for a Verified Duct System Design then result is RvalueVerifiedDuctSystem, display text Verified Duct System Design; else If  parent CC-PRF  provides R-value for this system name, result is that R-value; else result is N/A stored in the NotApplicableMessage.</xsd:documentation>

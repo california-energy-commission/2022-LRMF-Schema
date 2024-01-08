@@ -186,10 +186,11 @@ InstantaneousConsumerElectric, StorageCommercialElectric, StorageConsumerElectri
                                           </xsd:annotation>
                                        </xsd:element>
                                     </xsd:choice>
-                                    <xsd:element name="A09_ResidentialDHWDwellingUnitDistributionType">
-                                       <xsd:annotation>
-                                          <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
-                                          <xsd:documentation source="CalculationsAndRules">Reference values from LMCC.  If information is not available on the LMCC, then allow user input. 
+                                    <xsd:choice maxOccurs="1">
+                                       <xsd:element name="A09_ResidentialDHWDwellingUnitDistributionType">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">Reference values from LMCC.  If information is not available on the LMCC, then allow user input. 
                                              If performance then allowed values are
                                              *Standard Distribution System
                                              * Point of Use
@@ -200,23 +201,31 @@ InstantaneousConsumerElectric, StorageCommercialElectric, StorageConsumerElectri
                                                 
                                              Else if prescriptive Allowed values are 
                                              *Standard Distribution System
+                                             * Demand Recirculation
                                              * Demand Recirculation Manual Control</xsd:documentation>
-                                       </xsd:annotation>
-                                       <xsd:simpleType>
-                                          <xsd:restriction base="hvac:ResidentialDHWDwellingUnitDistributionType">
-                                             <xsd:enumeration value="CompactHotWaterDistributionSystemBasic"/>
-                                             <xsd:enumeration value="DemandRecirculation"/>
-                                             <xsd:enumeration value="DemandRecirculationManualControl"/>
-                                             <xsd:enumeration value="DemandRecirculationSensorControls"/>
-                                             <xsd:enumeration value="Other"/>
-                                             <xsd:enumeration value="PointOfUse"/>
-                                             <xsd:enumeration value="RecirculationNonDemand"/>
-                                             <xsd:enumeration value="StandardDistribution"/>
-                                             <xsd:enumeration value="StandardDistributionCentralParallelPiping"/>
-                                             <xsd:enumeration value="StandardDistributionInsulatedPipes"/>
-                                          </xsd:restriction>
-                                       </xsd:simpleType>
-                                    </xsd:element>
+                                          </xsd:annotation>
+                                          <xsd:simpleType>
+                                             <xsd:restriction base="hvac:ResidentialDHWDwellingUnitDistributionType">
+                                                <xsd:enumeration value="CompactHotWaterDistributionSystemBasic"/>
+                                                <xsd:enumeration value="DemandRecirculation"/>
+                                                <xsd:enumeration value="DemandRecirculationManualControl"/>
+                                                <xsd:enumeration value="DemandRecirculationSensorControls"/>
+                                                <xsd:enumeration value="Other"/>
+                                                <xsd:enumeration value="PointOfUse"/>
+                                                <xsd:enumeration value="RecirculationNonDemand"/>
+                                                <xsd:enumeration value="StandardDistribution"/>
+                                                <xsd:enumeration value="StandardDistributionCentralParallelPiping"/>
+                                                <xsd:enumeration value="StandardDistributionInsulatedPipes"/>
+                                             </xsd:restriction>
+                                          </xsd:simpleType>
+                                       </xsd:element>
+                                       <xsd:element name="A09_NotApplicableMessage" type="comp:NotApplicableMessage">
+                                          <xsd:annotation>
+                                             <xsd:documentation source="FieldText">Dwelling Unit DHW System Distribution Type</xsd:documentation>
+                                             <xsd:documentation source="CalculationsAndRules">If parent is LMCC-PRF And value is N/A result = N/A stored in the NotApplicableMessage;</xsd:documentation>
+                                          </xsd:annotation>
+                                       </xsd:element>
+                                    </xsd:choice>
                                     <xsd:choice maxOccurs="1">
                                        <xsd:element name="A10_CompactDistributionType" type="hvac:CompactDistributionType">
                                           <xsd:annotation>
@@ -1180,6 +1189,7 @@ Require one row of data for each water heater identified in Section A TableDesig
                                                 *Uniform Energy Factor
                                                 *AFUE
                                                 *Thermal Efficiency
+                                                *COP
                                                 *Value=N/A</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
@@ -1190,6 +1200,7 @@ Require one row of data for each water heater identified in Section A TableDesig
                                                 *Uniform Energy Factor
                                                 *AFUE
                                                 *Thermal Efficiency
+                                                *COP
                                                 *Value=N/A</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
