@@ -2493,6 +2493,7 @@
             <dtyp:displayterm value="LMCI-PLB-01">LMCI-PLB-01</dtyp:displayterm>
             <dtyp:displayterm value="LMCI-PLB-01-E">LMCI-PLB-01-E</dtyp:displayterm>
             <dtyp:displayterm value="LMCI-PLB-02-E">LMCI-PLB-02-E</dtyp:displayterm>
+            <dtyp:displayterm value="LMCI-PLB-03-E">LMCI-PLB-03-E</dtyp:displayterm>
             <dtyp:displayterm value="LMCI-PLB-21-H">LMCI-PLB-21-H</dtyp:displayterm>
             <dtyp:displayterm value="LMCI-PLB-22-H">LMCI-PLB-22-H</dtyp:displayterm>
             <dtyp:displayterm value="LMCI-PRC-01">LMCI-PRC-01</dtyp:displayterm>
@@ -2656,6 +2657,7 @@
          <xsd:enumeration value="LMCI-PLB-01"/>
          <xsd:enumeration value="LMCI-PLB-01-E"/>
          <xsd:enumeration value="LMCI-PLB-02-E"/>
+         <xsd:enumeration value="LMCI-PLB-03-E"/>
          <xsd:enumeration value="LMCI-PLB-21-H"/>
          <xsd:enumeration value="LMCI-PLB-22-H"/>
          <xsd:enumeration value="LMCI-PRC-01"/>
@@ -3019,6 +3021,7 @@
             <dtyp:displayterm value="LMCIMCH33H">LMCIMCH33H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIPLB01E">LMCIPLB01E</dtyp:displayterm>
             <dtyp:displayterm value="LMCIPLB02E">LMCIPLB02E</dtyp:displayterm>
+            <dtyp:displayterm value="LMCIPLB03E">LMCIPLB03E</dtyp:displayterm>
             <dtyp:displayterm value="LMCIPLB21H">LMCIPLB21H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIPLB22H">LMCIPLB22H</dtyp:displayterm>
             <dtyp:displayterm value="LMCIPLBE">LMCIPLBE</dtyp:displayterm>
@@ -3292,6 +3295,7 @@
          <xsd:enumeration value="LMCIMCH33H"/>
          <xsd:enumeration value="LMCIPLB01E"/>
          <xsd:enumeration value="LMCIPLB02E"/>
+         <xsd:enumeration value="LMCIPLB03E"/>
          <xsd:enumeration value="LMCIPLB21H"/>
          <xsd:enumeration value="LMCIPLB22H"/>
          <xsd:enumeration value="LMCIPLBE"/>

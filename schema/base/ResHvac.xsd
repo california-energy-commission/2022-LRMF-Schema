@@ -691,6 +691,25 @@
          <xsd:enumeration value="RuudPROUH80RU245"/>
       </xsd:restriction>
    </xsd:simpleType>
+   <xsd:simpleType name="AquaThermAireSimulationGroup">
+      <xsd:annotation>
+         <xsd:appinfo source="displaytermType">
+            <dtyp:displayterm>Simulated Model Group AquaThermAire</dtyp:displayterm>
+         </xsd:appinfo>
+         <xsd:appinfo source="displayterm">
+            <dtyp:displayterm value="AquaThermAireCHT202136A">CHT2021-36A (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202136C">CHT2021-36C (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202148A">CHT2021-48A (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202148C">CHT2021-48C (54 gal)</dtyp:displayterm>
+         </xsd:appinfo>
+      </xsd:annotation>
+      <xsd:restriction base="dtyp:EnumerationConstant">
+         <xsd:enumeration value="AquaThermAireCHT202136A"/>
+         <xsd:enumeration value="AquaThermAireCHT202136C"/>
+         <xsd:enumeration value="AquaThermAireCHT202148A"/>
+         <xsd:enumeration value="AquaThermAireCHT202148C"/>
+      </xsd:restriction>
+   </xsd:simpleType>
    <xsd:simpleType name="ArrayAdjustedPowerOutput">
       <xsd:annotation>
          <xsd:documentation>  Units: kW</xsd:documentation>
@@ -4914,6 +4933,7 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="American">American</dtyp:displayterm>
             <dtyp:displayterm value="AOSmith">A. O. Smith</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAire">AquaThermAire</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhite">Bradford White</dtyp:displayterm>
             <dtyp:displayterm value="Colmac">Colmac</dtyp:displayterm>
             <dtyp:displayterm value="DirectEnergy">Direct Energy</dtyp:displayterm>
@@ -4938,6 +4958,7 @@
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="American"/>
          <xsd:enumeration value="AOSmith"/>
+         <xsd:enumeration value="AquaThermAire"/>
          <xsd:enumeration value="BradfordWhite"/>
          <xsd:enumeration value="Colmac"/>
          <xsd:enumeration value="DirectEnergy"/>
@@ -4968,6 +4989,7 @@
          <xsd:appinfo source="displayterm">
             <dtyp:displayterm value="American">American</dtyp:displayterm>
             <dtyp:displayterm value="AOSmith">A. O. Smith</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAire">AquaThermAire</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhite">Bradford White</dtyp:displayterm>
             <dtyp:displayterm value="DirectEnergy">Direct Energy</dtyp:displayterm>
             <dtyp:displayterm value="EcoSense">EcoSense</dtyp:displayterm>
@@ -4990,6 +5012,7 @@
       <xsd:restriction base="dtyp:EnumerationConstant">
          <xsd:enumeration value="American"/>
          <xsd:enumeration value="AOSmith"/>
+         <xsd:enumeration value="AquaThermAire"/>
          <xsd:enumeration value="BradfordWhite"/>
          <xsd:enumeration value="DirectEnergy"/>
          <xsd:enumeration value="EcoSense"/>
@@ -5070,6 +5093,10 @@
             <dtyp:displayterm value="AOSmithHPTU80N">HPTU 80N 120  (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithPHPT60">PHPT 60  (60 gal)</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithPHPT80">PHPT 80  (80 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202136A">CHT2021-36A (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202136C">CHT2021-36C (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202148A">CHT2021-48A (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202148C">CHT2021-48C (54 gal)</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhiteRE2H50">RE2H50R10B-1NCWT  (50 gal)</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhiteRE2H50S61NCWT">RE2H50S6-1NCWT (50 gal)</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhiteRE2H65T101NCWT">RE2H65T10-1NCWT  (65 gal)</dtyp:displayterm>
@@ -5479,6 +5506,10 @@
          <xsd:enumeration value="AOSmithHPTU80N"/>
          <xsd:enumeration value="AOSmithPHPT60"/>
          <xsd:enumeration value="AOSmithPHPT80"/>
+         <xsd:enumeration value="AquaThermAireCHT202136A"/>
+         <xsd:enumeration value="AquaThermAireCHT202136C"/>
+         <xsd:enumeration value="AquaThermAireCHT202148A"/>
+         <xsd:enumeration value="AquaThermAireCHT202148C"/>
          <xsd:enumeration value="BradfordWhiteRE2H50"/>
          <xsd:enumeration value="BradfordWhiteRE2H50S61NCWT"/>
          <xsd:enumeration value="BradfordWhiteRE2H65T101NCWT"/>
@@ -5885,6 +5916,10 @@
             <dtyp:displayterm value="AOSmithHPTU80N">HPTU 80N 120  (80 gal)</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithPHPT60">PHPT 60  (60 gal)</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithPHPT80">PHPT 80  (80 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202136A">CHT2021-36A (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202136C">CHT2021-36C (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202148A">CHT2021-48A (54 gal)</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAireCHT202148C">CHT2021-48C (54 gal)</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhiteRE2H50">RE2H50R10B-1NCWT  (50 gal)</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhiteRE2H50S61NCWT">RE2H50S6-1NCWT (50 gal)</dtyp:displayterm>
             <dtyp:displayterm value="BradfordWhiteRE2H65T101NCWT">RE2H65T10-1NCWT  (65 gal)</dtyp:displayterm>
@@ -6236,6 +6271,10 @@
          <xsd:enumeration value="AOSmithHPTU80N"/>
          <xsd:enumeration value="AOSmithPHPT60"/>
          <xsd:enumeration value="AOSmithPHPT80"/>
+         <xsd:enumeration value="AquaThermAireCHT202136A"/>
+         <xsd:enumeration value="AquaThermAireCHT202136C"/>
+         <xsd:enumeration value="AquaThermAireCHT202148A"/>
+         <xsd:enumeration value="AquaThermAireCHT202148C"/>
          <xsd:enumeration value="BradfordWhiteRE2H50"/>
          <xsd:enumeration value="BradfordWhiteRE2H50S61NCWT"/>
          <xsd:enumeration value="BradfordWhiteRE2H65T101NCWT"/>
@@ -6563,6 +6602,7 @@
             <dtyp:displayterm value="AOSmithPHPT80">AO Smith PHPT 80</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithSHPT50">AO Smith SHPT 50</dtyp:displayterm>
             <dtyp:displayterm value="AOSmithSHPT80">AO Smith SHPT 80</dtyp:displayterm>
+            <dtyp:displayterm value="AquaThermAire">AquaThermAire</dtyp:displayterm>
             <dtyp:displayterm value="BWC202065">BWC 2020 65</dtyp:displayterm>
             <dtyp:displayterm value="ColmacCxA10_SP">Colmac Cx A10-SP</dtyp:displayterm>
             <dtyp:displayterm value="ColmacCxA15_SP">Colmac Cx A15-SP</dtyp:displayterm>
@@ -6633,6 +6673,7 @@
          <xsd:enumeration value="AOSmithPHPT80"/>
          <xsd:enumeration value="AOSmithSHPT50"/>
          <xsd:enumeration value="AOSmithSHPT80"/>
+         <xsd:enumeration value="AquaThermAire"/>
          <xsd:enumeration value="BWC202065"/>
          <xsd:enumeration value="ColmacCxA10_SP"/>
          <xsd:enumeration value="ColmacCxA15_SP"/>

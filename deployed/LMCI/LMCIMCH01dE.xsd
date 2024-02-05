@@ -269,7 +269,7 @@ End If</xsd:documentation>
                                        <xsd:element name="B06_NotApplicableMessage" type="comp:NotApplicableMessage">
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Distribution System Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Y02_ResidentialHeatingSystemType == VCHP_IndoorUnitDucted Or VCHP_IndoorUnitDuctedAndDuctless Or  VCHP_IndoorUnitDuctless
+                                             <xsd:documentation source="CalculationsAndRules">If parent CC-PRF Hvacdwell03b_ResidentialHeatingSystemType == VCHP_IndoorUnitDucted Or VCHP_IndoorUnitDuctedAndDuctless Or  VCHP_IndoorUnitDuctless
 result = NotApplicable stored in NotApplicableMessage
 Else Auto filled text: referenced from parent CC-PRF
 End If</xsd:documentation>

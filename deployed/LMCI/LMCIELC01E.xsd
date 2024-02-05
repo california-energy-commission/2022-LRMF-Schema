@@ -47,19 +47,11 @@
             </xsd:annotation>
             <xsd:complexType>
                <xsd:sequence>
-                  <xsd:element name="A01_ResElectricReadyScope" maxOccurs="unbounded">
+                  <xsd:element name="A01_ResElectricReadyScope" type="comp:ResElectricReadyScope" maxOccurs="unbounded">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Project Scope</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">User selects all that apply: ReadyHeatingHP, ReadyElecCooktop, ReadyElecDryer Or select ReadyElecNA if building is all-electric</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">User selects all that apply: ReadyHeatingHP, ReadyElecCooktop, ReadyElecDryer, ReadyElecDryerCommon Or select ReadyElecNA if building is all-electric</xsd:documentation>
                      </xsd:annotation>
-                     <xsd:simpleType>
-                        <xsd:restriction base="comp:ResElectricReadyScope">
-                           <xsd:enumeration value="ReadyElecCooktop"/>
-                           <xsd:enumeration value="ReadyElecDryer"/>
-                           <xsd:enumeration value="ReadyHeatingHP"/>
-                           <xsd:enumeration value="ReadyElecNA"/>
-                        </xsd:restriction>
-                     </xsd:simpleType>
                   </xsd:element>
                </xsd:sequence>
             </xsd:complexType>
@@ -207,7 +199,7 @@ A dedicated raceway from the main service to a panelboard (subpanel). The panelb
          <xsd:element name="Section_E" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Electric Clothes Dryer Ready</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ResElectricReadyScope includes ReadyElecDryer</xsd:documentation>
+               <xsd:documentation source="CalculationsAndRules">This section is applicable if A01_ResElectricReadyScope includes ReadyElecDryer or ReadyElecDryerCommon</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
