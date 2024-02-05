@@ -528,7 +528,7 @@ Provide one row of data for each of the indoor units listed on the MCH-01 that a
                <xsd:documentation source="FieldText">Verification: Installed Air Filter Sizing and Pressure Drop - RA3.1.4.7 and RA3.1.4.8</xsd:documentation>
                <xsd:documentation source="CalculationsAndRules">In this section MCH01 refers to the LMCI-MCH-01
  
-The section is required if in section B at least one indoor unit has B03 != Ductless; Require one row of data for each in the quantity reported in B05_DuctSystemAirFilterDeviceCount for each indoor unit in B01 that satisfies this requirement</xsd:documentation>
+The section is required if in section B at least one indoor unit has B03 == DuctsGT10Ft; Require one row of data for each in the quantity reported in B05_DuctSystemAirFilterDeviceCount for each indoor unit in B01 that satisfies this requirement</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
