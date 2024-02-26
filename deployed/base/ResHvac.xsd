@@ -10474,6 +10474,8 @@
             <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP-ducted+ductless</dtyp:displayterm>
             <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP-ductless</dtyp:displayterm>
             <dtyp:displayterm value="VCHP2">VCHP2</dtyp:displayterm>
+            <dtyp:displayterm value="VRF">Variable refrigerant flow</dtyp:displayterm>
+            <dtyp:displayterm value="WaterSourceHeatPump">Water source heat pump</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="CBECCresXML">
             <dtyp:CBECCresXMLterm value="AirToWaterHeatPump">AirToWaterHeatPump - Air to water heat pump (able to heat DHW)</dtyp:CBECCresXMLterm>
@@ -10521,6 +10523,8 @@
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDuctedAndDuctless"/>
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDuctless"/>
             <dtyp:CBECCresXMLterm value="VCHP2"/>
+            <dtyp:CBECCresXMLterm value="VRF">Variable refrigerant flow</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="WaterSourceHeatPump">Water source heat pump</dtyp:CBECCresXMLterm>
          </xsd:appinfo>
       </xsd:annotation>
       <xsd:restriction base="dtyp:EnumerationConstant">
@@ -10569,6 +10573,8 @@
          <xsd:enumeration value="VCHP_IndoorUnitDuctedAndDuctless"/>
          <xsd:enumeration value="VCHP_IndoorUnitDuctless"/>
          <xsd:enumeration value="VCHP2"/>
+         <xsd:enumeration value="VRF"/>
+         <xsd:enumeration value="WaterSourceHeatPump"/>
       </xsd:restriction>
    </xsd:simpleType>
    <xsd:simpleType name="ResidentialCoolingZoneType">
@@ -10777,6 +10783,8 @@
             <dtyp:displayterm value="VCHP_IndoorUnitDuctedAndDuctless">VCHP-ducted+ductless</dtyp:displayterm>
             <dtyp:displayterm value="VCHP_IndoorUnitDuctless">VCHP-ductless</dtyp:displayterm>
             <dtyp:displayterm value="VCHP2">VCHP2</dtyp:displayterm>
+            <dtyp:displayterm value="VRF">Variable refrigerant flow</dtyp:displayterm>
+            <dtyp:displayterm value="WaterSourceHeatPump">Water source heat pump</dtyp:displayterm>
             <dtyp:displayterm value="WoodHeat">Wood Heat</dtyp:displayterm>
          </xsd:appinfo>
          <xsd:appinfo source="CBECCresXML">
@@ -10817,6 +10825,8 @@
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDuctedAndDuctless"/>
             <dtyp:CBECCresXMLterm value="VCHP_IndoorUnitDuctless"/>
             <dtyp:CBECCresXMLterm value="VCHP2"/>
+            <dtyp:CBECCresXMLterm value="VRF">Variable refrigerant flow</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="WaterSourceHeatPump">Water source heat pump</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="WoodHeat"/>
          </xsd:appinfo>
       </xsd:annotation>
@@ -10858,6 +10868,8 @@
          <xsd:enumeration value="VCHP_IndoorUnitDuctedAndDuctless"/>
          <xsd:enumeration value="VCHP_IndoorUnitDuctless"/>
          <xsd:enumeration value="VCHP2"/>
+         <xsd:enumeration value="VRF"/>
+         <xsd:enumeration value="WaterSourceHeatPump"/>
          <xsd:enumeration value="WoodHeat"/>
       </xsd:restriction>
    </xsd:simpleType>
