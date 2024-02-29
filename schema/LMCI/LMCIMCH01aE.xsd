@@ -401,7 +401,7 @@ Require one row of data for each SC System in Section B;  do not allow user to o
                                        <xsd:element name="C02_EfficiencyType" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
  for this system name</xsd:documentation>
                                           </xsd:annotation>
                                           <xsd:simpleType>
@@ -416,7 +416,7 @@ Require one row of data for each SC System in Section B;  do not allow user to o
                                        <xsd:element name="C02_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Heating Efficiency Type</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
  for this system name</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
@@ -425,35 +425,35 @@ Require one row of data for each SC System in Section B;  do not allow user to o
                                        <xsd:element name="C03_EfficiencyMinimumValueAFUE" type="hvac:EfficiencyMinimumValueAFUE" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Heating Efficiency Value</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
  for this system name if it is AFUE.  Result value is stored as fraction but displayed as percent</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C03_EfficiencyMinimumValueCOP" type="hvac:EfficiencyMinimumValueCOP" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Heating Efficiency Value</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage;  Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage;  Else auto filled text: referenced from parent CC-PRF
  for this system name if it is COP. Result value is stored as fraction but displayed as percent</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C03_EfficiencyMinimumValueHSPF" type="hvac:EfficiencyMinimumValueHSPF" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Heating Efficiency Value</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
  for this system name  if it is HSPF. Result value is stored as fraction but displayed as percent</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C03_EfficiencyMinimumValueHSPF2" type="hvac:EfficiencyMinimumValueHSPF2" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Heating Efficiency Value</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
  for this system name  if it is HSPF2. Result value is stored as fraction but displayed as percent</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>
                                        <xsd:element name="C03_NotApplicableMessage" type="comp:NotApplicableMessage" >
                                           <xsd:annotation>
                                              <xsd:documentation source="FieldText">Minimum Heating Efficiency Value</xsd:documentation>
-                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == CombinedHydronic, result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
+                                             <xsd:documentation source="CalculationsAndRules">Calculated field:  If B03_ResidentialHeatingSystemType == AirToWaterHeatPump, CombinedHydronic, HeatPumpDHWCombo Or WoodHeat result = N/A stored in the  NotAppplicableMessage; Else auto filled text: referenced from parent CC-PRF
  for this system name</xsd:documentation>
                                           </xsd:annotation>
                                        </xsd:element>

@@ -10452,6 +10452,7 @@
             <dtyp:displayterm value="EvaporativeIndirect">Evaporative - indirect</dtyp:displayterm>
             <dtyp:displayterm value="EvaporativeIndirectDirect">Evaporative - indirect/direct</dtyp:displayterm>
             <dtyp:displayterm value="EvaporativelyCooledCondenser">Evaporatively cooled condenser</dtyp:displayterm>
+            <dtyp:displayterm value="FourPipeFanCoil">Four-pipe fan coil</dtyp:displayterm>
             <dtyp:displayterm value="GasAbsorptionAC">Gas absorption AC</dtyp:displayterm>
             <dtyp:displayterm value="GroundSourceHeatPump">Ground source heat pump</dtyp:displayterm>
             <dtyp:displayterm value="Hydronic">Hydronic</dtyp:displayterm>
@@ -10501,6 +10502,7 @@
             <dtyp:CBECCresXMLterm value="EvaporativeIndirect">evaporative - indirect</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="EvaporativeIndirectDirect">evaporative - indirectdirect</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="EvaporativelyCooledCondenser">evaporatively cooled condenser</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="FourPipeFanCoil">Four-pipe fan coil</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="GasAbsorptionAC">gas absorption AC</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="GroundSourceHeatPump">GroundSourceHeatPump - Ground source heat pump (able to heat DHW)</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="Hydronic">hydronic</dtyp:CBECCresXMLterm>
@@ -10551,6 +10553,7 @@
          <xsd:enumeration value="EvaporativeIndirect"/>
          <xsd:enumeration value="EvaporativeIndirectDirect"/>
          <xsd:enumeration value="EvaporativelyCooledCondenser"/>
+         <xsd:enumeration value="FourPipeFanCoil"/>
          <xsd:enumeration value="GasAbsorptionAC"/>
          <xsd:enumeration value="GroundSourceHeatPump"/>
          <xsd:enumeration value="Hydronic"/>
@@ -10762,6 +10765,8 @@
             <dtyp:displayterm value="DuctlessSplitHP">Ductless mini-split HP</dtyp:displayterm>
             <dtyp:displayterm value="DuctlessVRF_HP">Ductless VRF Heat Pump</dtyp:displayterm>
             <dtyp:displayterm value="Electric">Electric</dtyp:displayterm>
+            <dtyp:displayterm value="ElectricCombinedHydronic">Electric combined hydronic</dtyp:displayterm>
+            <dtyp:displayterm value="FourPipeFanCoil">Four-pipe fan coil</dtyp:displayterm>
             <dtyp:displayterm value="FloorFurnace">Floor Furnace</dtyp:displayterm>
             <dtyp:displayterm value="GasFurnaceDualFuelHP">Dual Fuel HP + GasFurnace</dtyp:displayterm>
             <dtyp:displayterm value="GasPackagedFurnace">Packaged Gas Furnace</dtyp:displayterm>
@@ -10804,6 +10809,8 @@
             <dtyp:CBECCresXMLterm value="DuctlessSplitHP">ductless split HP</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="DuctlessVRF_HP">Ductless VRF Heat Pump</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="Electric"/>
+            <dtyp:CBECCresXMLterm value="ElectricCombinedHydronic">Electric combined hydronic</dtyp:CBECCresXMLterm>
+            <dtyp:CBECCresXMLterm value="FourPipeFanCoil">Four-pipe fan coil</dtyp:CBECCresXMLterm>
             <dtyp:CBECCresXMLterm value="FloorFurnace"/>
             <dtyp:CBECCresXMLterm value="GasFurnaceDualFuelHP"/>
             <dtyp:CBECCresXMLterm value="GasPackagedFurnace"/>
@@ -10847,6 +10854,8 @@
          <xsd:enumeration value="DuctlessSplitHP"/>
          <xsd:enumeration value="DuctlessVRF_HP"/>
          <xsd:enumeration value="Electric"/>
+         <xsd:enumeration value="ElectricCombinedHydronic"/>
+         <xsd:enumeration value="FourPipeFanCoil"/>
          <xsd:enumeration value="FloorFurnace"/>
          <xsd:enumeration value="GasFurnaceDualFuelHP"/>
          <xsd:enumeration value="GasPackagedFurnace"/>
