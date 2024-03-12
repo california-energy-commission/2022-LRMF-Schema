@@ -180,7 +180,7 @@
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Variant MCH25f</xsd:documentation>
                         <xsd:documentation source="AdditionalRequirements">MCH-25f - Refrigerant Charge Verification -  New Package Unit With Factory Charge</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Use MCH25f New Package Unit With Factory Charge for remainder of this report If UseMinimumAirflowApprovedVerificationProcedure equals true and  UseRefrigerantChargeApprovedVerificationProcedure equals true, and RefrigerantChargeVerificationMethod equals NewFactoryCharge. Do not require a LMCV-MCH-25 for the SC system when a LMCI-MCH-25f is used.</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Use MCH25f New Package Unit With Factory Charge for remainder of this report If UseMinimumAirflowApprovedVerificationProcedure equals true and  UseRefrigerantChargeApprovedVerificationProcedure equals true, and RefrigerantChargeVerificationMethod equals NewFactoryCharge; OR If UseMinimumAirflowApprovedVerificationProcedure equals false and  UseRefrigerantChargeApprovedVerificationProcedure equals true, and RefrigerantChargeVerificationMethod equals NewFactoryCharge. Do not require a LMCV-MCH-25 for the SC system when a LMCI-MCH-25f is used.</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                </xsd:sequence>
