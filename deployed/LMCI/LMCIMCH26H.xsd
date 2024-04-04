@@ -57,6 +57,12 @@
                         </xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
+                  <xsd:element name="A01_ResidentialSpaceConditioningSystemName" type="hvac:ResidentialSpaceConditioningSystemName">
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Space Conditioning System Identification or Name</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">auto filled text: referenced from MCH-01</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
                   <xsd:element name="A02_ResidentialHvacSystemAreaServed" type="hvac:ResidentialHvacSystemAreaServed">
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Space Conditioning System Description of Area Served</xsd:documentation>

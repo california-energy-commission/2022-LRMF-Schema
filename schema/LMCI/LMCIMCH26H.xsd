@@ -68,6 +68,12 @@
                         <xsd:documentation source="AdditionalRequirements">[d:i]Procedures for verification of High SEER/SEER2 and EER/EER2 Equipment are described in Reference Appendix RA3.4.  Each HVAC system requiring verification must use a separate form.[/d:i]</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
+                  <xsd:element name="A01_ResidentialSpaceConditioningSystemName" type="hvac:ResidentialSpaceConditioningSystemName" >
+                     <xsd:annotation>
+                        <xsd:documentation source="FieldText">Space Conditioning System Identification or Name</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">auto filled text: referenced from MCH-01</xsd:documentation>
+                     </xsd:annotation>
+                  </xsd:element>
                   <xsd:element name="A02_ResidentialHvacSystemAreaServed" type="hvac:ResidentialHvacSystemAreaServed" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Space Conditioning System Description of Area Served</xsd:documentation>
