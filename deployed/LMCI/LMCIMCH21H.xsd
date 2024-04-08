@@ -232,46 +232,6 @@ End If</xsd:documentation>
                </xsd:sequence>
             </xsd:complexType>
          </xsd:element>
-         <xsd:element name="Section_F" minOccurs="0" maxOccurs="1">
-            <xsd:annotation>
-               <xsd:documentation source="FieldText">Duct Systems Located Entirely in Directly Conditioned Space, No Insulation Requirement - RA3.1.4.3.8</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">Display this section If A08_DuctSystemConditionedNoInsulationReq == true</xsd:documentation>
-               <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
-            </xsd:annotation>
-            <xsd:complexType>
-               <xsd:sequence>
-                  <xsd:element name="F01_AreDuctsEntirelyInConditionedSpace" type="comp:AreDuctsEntirelyInConditionedSpace">
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText">A visual inspection shall confirm the space conditioning distribution system location</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">User selects from list:  true value display term Entirely in directly conditioned space;  false value display term Not entirely in directly conditioned space - does not comply.</xsd:documentation>
-                     </xsd:annotation>
-                  </xsd:element>
-                  <xsd:element name="F02_DuctSystemLeakageActual" type="comp:DuctSystemLeakageActual">
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText">Actual system duct leakage rate (cfm) measured using RA3.1.4.3.4 Duct Leakage to Outside from Fan Pressurization of Ducts</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">User input numeric xxx.x</xsd:documentation>
-                     </xsd:annotation>
-                  </xsd:element>
-                  <xsd:element name="F03_AreDuctsInConditionedSpaceRValueExceptionCompliant" type="comp:AreDuctsInConditionedSpaceRValueExceptionCompliant">
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText">Compliance Statement</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Calculated field: 
-If F02_DuctSystemLeakageActual LTE 25 cfm,  and F01_AreDuctsEntirelyInConditionedSpace ==  true, 
-then result = true display term The duct system  is considered entirely in directly conditioned space and duct insulation is not required.  
-   
-Else result = false display term The system does meet the criteria for ducts entirely in directly conditioned space.
-End If</xsd:documentation>
-                     </xsd:annotation>
-                  </xsd:element>
-                  <xsd:element name="FEndNote1" minOccurs="0">
-                     <xsd:annotation>
-                        <xsd:documentation source="FieldText">End Note 1</xsd:documentation>
-                        <xsd:documentation source="AdditionalRequirements">The responsible person's signature on this compliance document affirms that all applicable requirements in this table have been met.</xsd:documentation>
-                     </xsd:annotation>
-                  </xsd:element>
-               </xsd:sequence>
-            </xsd:complexType>
-         </xsd:element>
       </xsd:sequence>
    </xsd:complexType>
    <xsd:element name="lMCIMCH21H" type="LMCIMCH21H">
