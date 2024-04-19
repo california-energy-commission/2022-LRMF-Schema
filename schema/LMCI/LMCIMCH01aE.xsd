@@ -1047,7 +1047,10 @@ If B04_ResidentialCoolingSystemType ==  CentralPackagedAC then
 result must be GTE 11 And GTE  C07_ EfficiencyMinimumValueEER to comply; 
  
 Else If B04_ResidentialCoolingSystemType == CentralSplitAC 
-If F10_CondenserRatedCoolingCapacity LT 45000 then 
+If F03_EfficiencyInstalledValueSEER GTE 16.0 then
+result must be GTE 10.2 And GTE C07_ EfficiencyMinimumValueEER to comply;
+
+Else If F10_CondenserRatedCoolingCapacity LT 45000 then 
 result must be GTE 12.2 And GTE C07_ EfficiencyMinimumValueEER to comply
  
 Else If F10_CondenserRatedCoolingCapacity GTE 45000 then 
@@ -1085,11 +1088,14 @@ Check that result is compliant:
  
 If  C06a_EfficiencyType == EER2 Or EER2SEER2 Then
 If B04_ResidentialCoolingSystemType == CentralSplitAC 
-If F10_CondenserRatedCoolingCapacity LT 45000 then 
-result must be GTE 11.7 And GTE C07_ EfficiencyMinimumValueEER to comply
+If F03_EfficiencySEER2 GTE 15.2 then
+result must be GTE 9.8 And GTE C07_ EfficiencyMinimumValueEER2 to comply
+ 
+Else If F10_CondenserRatedCoolingCapacity LT 45000 then 
+result must be GTE 11.7 And GTE C07_ EfficiencyMinimumValueEER2 to comply
  
 Else If F10_CondenserRatedCoolingCapacity GTE 45000 then 
-result must be GTE 11.2 And GTE C07_ EfficiencyMinimumValueEER to comply
+result must be GTE 11.2 And GTE C07_ EfficiencyMinimumValueEER2 to comply
 End If
 End If
  
@@ -1406,7 +1412,7 @@ This Section is applicable if one or more systems in section D has D04_Residenti
          <xsd:element name="Section_I" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Installed Heat Pump System -Efficiency and Performance Compliance Information</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This Section is applicable only if at least one system in section D has D04_ResidentialHeatingSystemType Or  D05_ResidentialCoolingSystemType ==  CentralLargePackagedHP, CentralPackagedHP, CentralSplitHP,  DuctlessSplitHP (display term Ductless mini-split HP), DuctedMiniSplitHP, AirToWaterHeatPump, GroundSourceHeatPump, DuctedMultiSplitHP, DuctlessMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctlessVRF_HP, SmallDuctHighVelocityHP, HydronicHP, HydronicHP_ForcedAir, RoomHP, VCHP_IndoorUnitDucted, VCHP_IndoorUnitDuctless or VCHP_IndoorUnitDuctedAndDuctless.   Require one row of data in this table for each of the SC Systems listed in Section B that is in this list.</xsd:documentation>
+               <xsd:documentation source="CalculationsAndRules">This Section is applicable only if at least one system in section D has D04_ResidentialHeatingSystemType Or  D05_ResidentialCoolingSystemType ==  CentralLargePackagedHP, CentralPackagedHP, CentralSplitHP,  DuctlessSplitHP (display term Ductless mini-split HP), DuctedMiniSplitHP, AirToWaterHeatPump, GroundSourceHeatPump, DuctedMultiSplitHP, DuctlessMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctlessVRF_HP, SmallDuctHighVelocityHP, HydronicHP, HydronicHP_ForcedAir, RoomHP, VCHP_IndoorUnitDucted, VCHP_IndoorUnitDuctless, VCHP_IndoorUnitDuctedAndDuctless or VRF.   Require one row of data in this table for each of the SC Systems listed in Section B that is in this list.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>

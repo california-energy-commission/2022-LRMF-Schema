@@ -1234,8 +1234,10 @@ If C06a_EffieincyType == EER Or EERSEER
 If B04_ResidentialCoolingSystemType ==  CentralPackagedAC, 
 result must be GTE 11 And GTE  C07_ EfficiencyMinimumValueEER to comply;  
  
-Else If B04_ResidentialCoolingSystemType == CentralSplitAC 
-If G10_CondenserRatedCoolingCapacity LT 45000  
+Else If B04_ResidentialCoolingSystemType == CentralSplitAC
+If G03_EfficiencyInstalledValueSEER GTE 16.0 then
+result must be GTE 10.2 And GTE C07_ EfficiencyMinimumValueEER to comply; 
+Else If G10_CondenserRatedCoolingCapacity LT 45000  
 result must be GTE 12.2  and GTE C07_EfficiencyMinimumValueEER to comply;
 Else If G10_CondenserRatedCoolingCapacity GTE 45000  
 result must be GTE 11.7  and GTE C07_EfficiencyMinimumValueEER to comply;
@@ -1260,7 +1262,9 @@ End If
  Check if result complies:
 If C06a_EffieincyType == EER2  Or EER2SEER2
 If B04_ResidentialCoolingSystemType == CentralSplitAC 
-If G10_CondenserRatedCoolingCapacity LT 45000  
+If G03_EfficiencySEER2 GTE 15.2 then
+result must be GTE 9.8 And GTE C07_ EfficiencyMinimumValueEER2 to comply
+Else If G10_CondenserRatedCoolingCapacity LT 45000  
 result must be GTE 11.7  and GTE C07_EfficiencyMinimumValueEER2 to comply;
 Else If G10_CondenserRatedCoolingCapacity GTE 45000  
 result must be GTE 11.2  and GTE C07_EfficiencyMinimumValueEER2 to comply;
@@ -1485,7 +1489,7 @@ End If</xsd:documentation>
          <xsd:element name="Section_I" minOccurs="0">
             <xsd:annotation>
                <xsd:documentation source="FieldText">Installed Heat Pump System - Split System Condensing Unit or Package Unit Equipment Information</xsd:documentation>
-               <xsd:documentation source="CalculationsAndRules">This Section is applicable only if at least one  system in section D has D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == CentralLargePackagedHP, CentralPackagedHP, CentralSplitHP,  DuctlessSplitHP (display term Ductless mini-split HP), DuctedMultiSplitHP, DuctlessMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctlessVRF_HP, SmallDuctHighVelocityHP, HydronicHP, HydronicHP_ForcedAir, RoomHP, DuctedMiniSplitHP, AirToWaterHeatPump, GroundSourceHeatPump, VCHP_IndoorUnitDucted, VCHP_IndoorUnitDuctless Or VCHP_IndoorUnitDuctedAndDuctless.   Require one row of data in this table for each of the SC Systems listed in Section D that meets BOTH of the following 2 criteria: D11== New and  D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == a value in this list;  ALSO if Section E applies, require one row of data for each SC system in Section E that meets ALL of the following 4 criteria: D11_EAA_SpaceConditionSystemStatus == Altered And E05_InstallingNewComponents == true And D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == a value in this list; And E10_ResidentialHvacHeatingComponentType Or E11_ResidentialHvacCoolingComponentType == OutdoorCondensingUnit Or , OutdoorPackageUnit.</xsd:documentation>
+               <xsd:documentation source="CalculationsAndRules">This Section is applicable only if at least one  system in section D has D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == CentralLargePackagedHP, CentralPackagedHP, CentralSplitHP,  DuctlessSplitHP (display term Ductless mini-split HP), DuctedMultiSplitHP, DuctlessMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctlessVRF_HP, SmallDuctHighVelocityHP, HydronicHP, HydronicHP_ForcedAir, RoomHP, DuctedMiniSplitHP, AirToWaterHeatPump, GroundSourceHeatPump, VCHP_IndoorUnitDucted, VCHP_IndoorUnitDuctless, VCHP_IndoorUnitDuctedAndDuctless or VRF.   Require one row of data in this table for each of the SC Systems listed in Section D that meets BOTH of the following 2 criteria: D11== New and  D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == a value in this list;  ALSO if Section E applies, require one row of data for each SC system in Section E that meets ALL of the following 4 criteria: D11_EAA_SpaceConditionSystemStatus == Altered And E05_InstallingNewComponents == true And D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == a value in this list; And E10_ResidentialHvacHeatingComponentType Or E11_ResidentialHvacCoolingComponentType == OutdoorCondensingUnit Or , OutdoorPackageUnit.</xsd:documentation>
                <xsd:documentation source="MinOccurs">If this section doesn't apply, display only the section FieldText and the statement 'This section does not apply to this project.'</xsd:documentation>
             </xsd:annotation>
             <xsd:complexType>
