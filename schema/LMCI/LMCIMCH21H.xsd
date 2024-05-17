@@ -101,7 +101,7 @@
                   <xsd:element name="A06_DuctSystemConditionedPerformanceCredit" type="comp:DuctSystemConditionedPerformanceCredit" >
                      <xsd:annotation>
                         <xsd:documentation source="FieldText">Status – Duct Systems Located Entirely in Conditioned Space, No Insulation Requirement</xsd:documentation>
-                        <xsd:documentation source="CalculationsAndRules">Calculated Field: : if Exception from Minimum R-Value for Duct System Located Entirely in Conditioned Space reported on MCH-01 = yes, then display message "true" and display Table D below; else display message "not applicable";</xsd:documentation>
+                        <xsd:documentation source="CalculationsAndRules">Calculated Field: : if LMCI-MCH-01 DuctMinimumRValueExceptions includes RValueLT6EntirelyInConditioned then result = true, then display message "True" and display Table D below; else display message "not applicable";</xsd:documentation>
                      </xsd:annotation>
                   </xsd:element>
                   <xsd:element name="A07_DuctsInConditionedSpaceRValueException" type="comp:DuctsInConditionedSpaceRValueException" >
