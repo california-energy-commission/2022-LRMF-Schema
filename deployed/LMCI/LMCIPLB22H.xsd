@@ -665,6 +665,14 @@ If Hpd10_HeatPumpWaterHeaterSimulationGroup ==  AOSmithSHPT80 list = AOSmithSHPT
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="Hpi03_AquaThermAireSimulationGroup" type="hvac:AquaThermAireSimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==  AquaThermAire list = AquaThermAireSimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="Hpi03_BWC202065SimulationGroup" type="hvac:BWC202065SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
