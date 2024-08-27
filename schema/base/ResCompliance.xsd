@@ -20945,7 +20945,8 @@ Document Data</dtyp:displayterm>
       </xsd:annotation>
       <xsd:sequence>
          <xsd:element name="compMgrRevision" type="comp:CompMgrRevision" minOccurs="0" ></xsd:element>
-      </xsd:sequence>
+      </xsd:sequence> 
+      <xsd:attribute name="addressHash" type="comp:AddressHash" use="required"/>
       <xsd:attribute name="complianceDocumentGUID" type="comp:ComplianceDocumentGUID" use="required"></xsd:attribute>
       <xsd:attribute name="complianceDocumentSchemaVersion" type="comp:ComplianceDocumentSchemaVersion" use="required"></xsd:attribute>
       <xsd:attribute name="compMgrVersion" type="comp:CompMgrVersion" use="optional"></xsd:attribute>
