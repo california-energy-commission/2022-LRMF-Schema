@@ -969,6 +969,38 @@ If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier3Generic80 list = Tier3Gen
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic40" type="hvac:Tier4Generic40" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier4Generic40 list = Tier4Generic40  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic50" type="hvac:Tier4Generic50" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier4Generic50 list = Tier4Generic50  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic65" type="hvac:Tier4Generic65" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  Tier4Generic65 list = Tier4Generic65  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_Tier4Generic80" type="hvac:Tier4Generic80" >
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==   Tier4Generic80 list = Tier4Generic80  values.
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                       </xsd:choice>
                                                    </xsd:sequence>
                                                 </xsd:complexType>
