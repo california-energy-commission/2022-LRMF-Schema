@@ -666,6 +666,30 @@ If Hpd10_HeatPumpWaterHeaterSimulationGroup == GE201480 list = GE201480Simulatio
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="Hpi03_HarvestThermal40SimulationGroup" type="hvac:HarvestThermal40SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup == HarvestThermal40 list = HarvestThermal40SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="Hpi03_HarvestThermal80SimulationGroup" type="hvac:HarvestThermal80SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup == HarvestThermal80 list = HarvestThermal80SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="Hpi03_HarvestThermal120SimulationGroup" type="hvac:HarvestThermal120SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup == HarvestThermal120 list = HarvestThermal120SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="Hpi03_Rheem2020Build40SimulationGroup" type="hvac:Rheem2020Build40SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -789,48 +813,72 @@ End If</xsd:documentation>
                                                          <xsd:element name="Hpi03_RheemPlugInDedicated40SimulationGroup" type="hvac:RheemPlugInDedicated40SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInDedicated40 list = RheemPlugInDedicated40SimulationGroup values; 
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInDedicated40 list = RheemPlugInDedicated40SimulationGroup values; 
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                          <xsd:element name="Hpi03_RheemPlugInDedicated50SimulationGroup" type="hvac:RheemPlugInDedicated50SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInDedicated50 list = RheemPlugInDedicated50SimulationGroup values; 
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInDedicated50 list = RheemPlugInDedicated50SimulationGroup values; 
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                          <xsd:element name="Hpi03_RheemPlugInShared40SimulationGroup" type="hvac:RheemPlugInShared40SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared40 list = RheemPlugInShared40SimulationGroup values; 
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared40 list = RheemPlugInShared40SimulationGroup values; 
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                          <xsd:element name="Hpi03_RheemPlugInShared50SimulationGroup" type="hvac:RheemPlugInShared50SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared50 list = RheemPlugInShared50SimulationGroup values; 
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared50 list = RheemPlugInShared50SimulationGroup values; 
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                          <xsd:element name="Hpi03_RheemPlugInShared65SimulationGroup" type="hvac:RheemPlugInShared65SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared65 list = RheemPlugInShared65SimulationGroup values; 
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared65 list = RheemPlugInShared65SimulationGroup values; 
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
                                                          <xsd:element name="Hpi03_RheemPlugInShared80SimulationGroup" type="hvac:RheemPlugInShared80SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared80 list = RheemPlugInShared80SimulationGroup values; 
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==     RheemPlugInShared80 list = RheemPlugInShared80SimulationGroup values; 
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="Hpi03_SANCO240SimulationGroup" type="hvac:SANCO240SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==   SANCO240 list = SANCO240SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="Hpi03_SANCO280SimulationGroup" type="hvac:SANCO280SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==   SANCO280 list = SANCO280SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="Hpi03_SANCO2120SimulationGroup" type="hvac:SANCO2120SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from Hpd03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If Hpd10_HeatPumpWaterHeaterSimulationGroup ==   SANCO2120 list = SANCO2120SimulationGroup values;
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
