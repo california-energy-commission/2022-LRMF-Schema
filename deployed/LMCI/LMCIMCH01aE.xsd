@@ -1762,7 +1762,7 @@ End If</xsd:documentation>
                                           <xsd:documentation source="CalculationsAndRules">If system type in D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == DuctedMultiSplitHP, DuctedDuctlessMultiSplitHP, DuctedMultiSplitAC, DuctedDuctlessMultiSplitAC 
 result = false display term No.  
  
-Else If system type in D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == CentralSplitAC, CentralSplitHP,   CentralPackagedAC, CentralPackagedHP, CentralLargePackagedAC Or CentralLargePackagedHP 
+Else If system type in D04_ResidentialHeatingSystemType Or D05_ResidentialCoolingSystemType == CentralSplitAC, CentralSplitHP,   CentralPackagedAC, CentralPackagedHP, CentralLargePackagedAC, CentralLargePackagedHP, VCHP_IndoorUnitDucted, Or VCHP_IndoorUnitDuctedAndDuctless 
 result = true display term Yes; 
  
 Else 
