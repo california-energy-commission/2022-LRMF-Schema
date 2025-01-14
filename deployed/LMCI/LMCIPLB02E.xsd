@@ -615,6 +615,14 @@ Require one row of data for each  water heater identified in TableHpwhd</xsd:doc
                                                 <xsd:complexType>
                                                    <xsd:sequence>
                                                       <xsd:choice maxOccurs="1">
+                                                         <xsd:element name="B2hp03_AOSmithHPTS40SimulationGroup" type="hvac:AOSmithHPTS40SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  AOSmithHPTS40,  list = AOSmithHPTS40SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_AOSmithHPTS50SimulationGroup" type="hvac:AOSmithHPTS50SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -703,6 +711,30 @@ If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  AquaThermAire list = AquaThermA
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
+                                                         <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2H50SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2H50SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H50 list = BradfordWhiteAeroThermRE2H50SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2H65SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2H65SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H65 list = BradfordWhiteAeroThermRE2H65SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
+                                                         <xsd:element name="B2hp03_BradfordWhiteAeroThermRE2H80SimulationGroup" type="hvac:BradfordWhiteAeroThermRE2H80SimulationGroup">
+                                                            <xsd:annotation>
+                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
+                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
+If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  BradfordWhiteAeroThermRE2H80 list = BradfordWhiteAeroThermRE2H80SimulationGroup values;
+End If</xsd:documentation>
+                                                            </xsd:annotation>
+                                                         </xsd:element>
                                                          <xsd:element name="B2hp03_BWC202065SimulationGroup" type="hvac:BWC202065SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
@@ -727,27 +759,19 @@ If A2hp09_HeatPumpWaterHeaterSimulationGroup ==  GE201480 list = GE201480Simulat
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
-                                                         <xsd:element name="B2hp03_HarvestThermal40SimulationGroup" type="hvac:HarvestThermal40SimulationGroup">
+                                                         <xsd:element name="B2hp03_LG_APHWC50SimulationGroup" type="hvac:LG_APHWC50SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                                                <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup == HarvestThermal40 list = HarvestThermal40SimulationGroup values;
+If A2hp09_HeatPumpWaterHeaterSimulationGroup == LG_APHWC50 list = LG_APHWC50SimulationGroup values;
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
-                                                         <xsd:element name="B2hp03_HarvestThermal80SimulationGroup" type="hvac:HarvestThermal80SimulationGroup">
+                                                         <xsd:element name="B2hp03_LG_APHWC80SimulationGroup" type="hvac:LG_APHWC80SimulationGroup">
                                                             <xsd:annotation>
                                                                <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
                                                                <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup == HarvestThermal80 list = HarvestThermal80SimulationGroup values;
-End If</xsd:documentation>
-                                                            </xsd:annotation>
-                                                         </xsd:element>
-                                                         <xsd:element name="B2hp03_HarvestThermal120SimulationGroup" type="hvac:HarvestThermal120SimulationGroup">
-                                                            <xsd:annotation>
-                                                               <xsd:documentation source="FieldText">Make and Model</xsd:documentation>
-                                                               <xsd:documentation source="CalculationsAndRules">Reference value from A2hp03_HeatPumpWaterHeaterModel as default and allow user to override with an equivalent system based on the simulated equipment as follows: 
-If A2hp09_HeatPumpWaterHeaterSimulationGroup == HarvestThermal120 list = HarvestThermal120SimulationGroup values;
+If A2hp09_HeatPumpWaterHeaterSimulationGroup == LG_APHWC80 list = LG_APHWC80SimulationGroup values;
 End If</xsd:documentation>
                                                             </xsd:annotation>
                                                          </xsd:element>
