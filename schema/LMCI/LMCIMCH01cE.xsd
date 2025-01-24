@@ -505,6 +505,8 @@ Require one row of data to be entered in this table for each space conditioning 
                                           <xsd:restriction base="hvac:DuctLocation">
                                              <xsd:enumeration value="ConditionedSpace"/>
                                              <xsd:enumeration value="ConditionedSpaceExcept12ft"/>
+                                             <xsd:enumeration value="DuctedAndDuctlessIndoorUnits"/>
+                                             <xsd:enumeration value="Ductless"/>
                                              <xsd:enumeration value="DuctsInMultipleLocations"/>
                                              <xsd:enumeration value="Outdoors"/>
                                              <xsd:enumeration value="UnconditionedAttic"/>
